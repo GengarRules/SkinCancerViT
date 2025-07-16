@@ -1,10 +1,7 @@
 import torch
 import torch.nn as nn
 from transformers import (
-    AutoImageProcessor,
     AutoModel,
-    TrainingArguments,
-    Trainer,
     PreTrainedModel,
     PretrainedConfig,
 )

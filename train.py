@@ -1,18 +1,11 @@
 import os
-import torch
-from datasets import load_dataset, DatasetDict
 from transformers import (
     AutoImageProcessor,
-    AutoModel,
     TrainingArguments,
     Trainer,
-    PreTrainedModel,
-    PretrainedConfig,
 )
 import numpy as np
 import evaluate
-from PIL import Image
-from collections import defaultdict
 
 from skincancer_vit.model import SkinCancerViTModel, SkinCancerViTModelConfig
 from skincancer_vit.data import (

@@ -1,12 +1,9 @@
 import torch
-import torch.nn as nn
 from datasets import load_dataset
-from transformers import AutoImageProcessor, AutoModel
-import numpy as np
-from PIL import Image
+from transformers import AutoImageProcessor
 import os
 
-from skincancer_vit.model import SkinCancerViTModel, SkinCancerViTModelConfig
+from skincancer_vit.model import SkinCancerViTModel
 from skincancer_vit.data import load_and_prepare_data, create_preprocessing_function
 
 
@@ -100,7 +97,7 @@ if __name__ == "__main__":
             localization = example["localization"]
             true_dx = example["dx"]
 
-            print(f"\n--- Sample {i+1} ---")
+            print(f"\n--- Sample {i + 1} ---")
             print(
                 f"Input: Age={age}, Localization='{localization}', True Diagnosis='{true_dx}'"
             )
@@ -120,15 +117,11 @@ if __name__ == "__main__":
                 if localization in localization_to_id:
                     localization_one_hot[localization_to_id[localization]] = 1.0
 
-                age_normalized = torch.tensor(
-                    [normalize_age(age)], dtype=torch.float, device=device
-                )
+                age_normalized = torch.tensor([age], dtype=torch.float, device=device)
 
                 tabular_features = torch.cat(
                     [localization_one_hot, age_normalized]
-                ).unsqueeze(
-                    0
-                )  # Add batch dimension
+                ).unsqueeze(0)  # Add batch dimension
 
                 # Perform Inference
                 outputs = model(
@@ -145,7 +138,7 @@ if __name__ == "__main__":
                 else:
                     print("Prediction: INCORRECT")
             except Exception as e:
-                print(f"Error during prediction for sample {i+1}: {e}")
+                print(f"Error during prediction for sample {i + 1}: {e}")
 
     print("\nInference demonstration complete.")
 
