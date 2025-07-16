@@ -8,6 +8,7 @@ from transformers import (
     TrainingArguments,
     Trainer,
     PreTrainedModel,
+    PretrainedConfig,
 )
 import numpy as np
 import evaluate
@@ -15,19 +16,39 @@ from PIL import Image
 from collections import defaultdict
 
 
-class CombinedModel(nn.Module):
-    def __init__(self, model_checkpoint, total_tabular_features_dim, num_dx_labels):
-        super().__init__()
-        # Load the Vision Transformer backbone
-        # AutoModel is used to get the base model without the classification head
-        self.vision_model = AutoModel.from_pretrained(model_checkpoint)
-        # The output dimension of ViT's pooled representation (CLS token output)
+class CombinedModelConfig(PretrainedConfig):
+    model_type = (
+        "combined_multimodal_skin_cancer"  # A unique model type for your custom model
+    )
+
+    def __init__(
+        self,
+        vision_model_checkpoint="google/vit-base-patch16-224-in21k",
+        total_tabular_features_dim=None,
+        num_dx_labels=None,
+        **kwargs,
+    ):
+        super().__init__(**kwargs)
+        self.vision_model_checkpoint = vision_model_checkpoint
+        self.total_tabular_features_dim = total_tabular_features_dim
+        self.num_dx_labels = num_dx_labels
+
+
+class CombinedModel(PreTrainedModel):
+    config_class = CombinedModelConfig  # Link to your custom config class
+
+    def __init__(self, config):
+        super().__init__(config)
+        self.config = config  # Store config for easy access
+
+        # Load the Vision Transformer backbone using config.vision_model_checkpoint
+        self.vision_model = AutoModel.from_pretrained(config.vision_model_checkpoint)
         self.vision_output_dim = self.vision_model.config.hidden_size
 
-        # MLP for tabular features (now only age + localization)
+        # MLP for tabular features using config.total_tabular_features_dim
         self.tabular_mlp = nn.Sequential(
             nn.Linear(
-                total_tabular_features_dim, 128
+                config.total_tabular_features_dim, 128
             ),  # Smaller hidden layer for tabular
             nn.ReLU(),
             nn.Dropout(0.1),
@@ -35,13 +56,17 @@ class CombinedModel(nn.Module):
         )
         self.tabular_output_dim = 64
 
-        # Final classification head
+        # Final classification head using config.num_dx_labels
         self.classifier = nn.Linear(
-            self.vision_output_dim + self.tabular_output_dim, num_dx_labels
+            self.vision_output_dim + self.tabular_output_dim, config.num_dx_labels
         )
 
         # Loss function
         self.loss_fct = nn.CrossEntropyLoss()
+
+        # Initialize weights for custom layers (tabular_mlp, classifier)
+        # This calls PreTrainedModel's post_init which handles default initialization
+        self.post_init()
 
     def forward(self, pixel_values, tabular_features, labels=None):
         # Process image data
@@ -79,31 +104,19 @@ class CustomDataCollator:
         labels_to_stack = []
 
         for f in features:
-            # Robust unwrapping for pixel_values: Keep unwrapping if it's a list and contains elements
+            # Keep unwrapping if it's a list and contains elements
             # This unwrapping logic is kept for safety, but with set_format, pixel_values should ideally already be tensors.
             px_val = f["pixel_values"]
             while isinstance(px_val, list) and len(px_val) > 0:
                 px_val = px_val[0]  # Get the first element if it's a list
 
-            # # After unwrapping, verify it's a tensor. If not, raise an error.
-            # if not isinstance(px_val, torch.Tensor):
-            #     raise TypeError(
-            #         f"Pixel values are not a Tensor after unwrapping. "
-            #         f"Got type: {type(px_val)}. Original value: {f['pixel_values']}"
-            #     )
             pixel_values_to_stack.append(px_val)
 
-            # Robust unwrapping for tabular_features: Apply the same logic
+            # Apply the same logic
             tab_val = f["tabular_features"]
             while isinstance(tab_val, list) and len(tab_val) > 0:
                 tab_val = tab_val[0]
 
-            # # After unwrapping, verify it's a tensor. If not, raise an error.
-            # if not isinstance(tab_val, torch.Tensor):
-            #     raise TypeError(
-            #         f"Tabular features are not a Tensor after unwrapping. "
-            #         f"Got type: {type(tab_val)}. Original value: {f['tabular_features']}"
-            #     )
             tabular_features_to_stack.append(tab_val)
 
             # Labels are typically integers
@@ -282,7 +295,7 @@ def setup_training_arguments():
     """
     print("Setting up training arguments...")
     training_args = TrainingArguments(
-        output_dir="./skin_cancer_multimodal_results",  # Directory to save checkpoints and logs
+        output_dir="./results",  # Directory to save checkpoints and logs
         per_device_train_batch_size=16,  # Batch size per GPU/CPU for training
         per_device_eval_batch_size=16,  # Batch size per GPU/CPU for evaluation
         num_train_epochs=3,  # Number of training epochs
@@ -324,7 +337,7 @@ def train_and_evaluate_model(
     print(f"Test results: {test_results}")
 
     # Save final model
-    final_model_save_path = "./skin_cancer_multimodal_results/final_model"
+    final_model_save_path = "./results/final_model"
     os.makedirs(final_model_save_path, exist_ok=True)
     trainer.save_model(final_model_save_path)
     print(f"Final model saved to: {final_model_save_path}")
@@ -372,7 +385,12 @@ if __name__ == "__main__":
     print(processed_dataset)
 
     # Define and Initialize Custom Multimodal Model
-    model = CombinedModel(model_checkpoint, total_tabular_features_dim, num_dx_labels)
+    model_config = CombinedModelConfig(
+        vision_model_checkpoint=model_checkpoint,
+        total_tabular_features_dim=total_tabular_features_dim,
+        num_dx_labels=num_dx_labels,
+    )
+    model = CombinedModel(model_config)  # Initialize with the config object
     print("Multimodal model initialized.")
 
     # Create Custom Data Collator
