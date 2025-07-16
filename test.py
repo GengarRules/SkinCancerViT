@@ -6,20 +6,8 @@ import numpy as np
 from PIL import Image
 import os
 
-
-try:
-    from train import (
-        CombinedModel,
-        CombinedModelConfig,
-        load_and_prepare_data,
-        create_preprocessing_function,
-    )
-except ImportError as e:
-    print(f"Error importing from main.py: {e}")
-    print(
-        "Please ensure main.py is in the same directory and defines CombinedModel, CombinedModelConfig, load_and_prepare_data, and create_preprocessing_function."
-    )
-    exit()
+from skincancer_vit.model import SkinCancerViTModel, SkinCancerViTModelConfig
+from skincancer_vit.data import load_and_prepare_data, create_preprocessing_function
 
 
 if __name__ == "__main__":
@@ -38,11 +26,9 @@ if __name__ == "__main__":
             f"Error: 'config.json' not found in '{model_path}'. Please run main.py to save the model correctly."
         )
         exit()
-    if not os.path.exists(
-        os.path.join(model_path, "model.safetensors")
-    ) and not os.path.exists(os.path.join(model_path, "pytorch_model.bin")):
+    if not os.path.exists(os.path.join(model_path, "model.safetensors")):
         print(
-            f"Error: Neither 'model.safetensors' nor 'pytorch_model.bin' found in '{model_path}'. Please run main.py to save the model correctly."
+            f"Error: 'model.safetensors' not found in '{model_path}'. Please run train.py to save the model correctly."
         )
         exit()
 
@@ -71,9 +57,9 @@ if __name__ == "__main__":
     image_processor = AutoImageProcessor.from_pretrained(model_checkpoint_name)
     print("Image processor loaded.")
 
-    # Step 3: Load the trained CombinedModel using from_pretrained
+    # Step 3: Load the trained SkinCancerViTModel using from_pretrained
     try:
-        model = CombinedModel.from_pretrained(model_path)
+        model = SkinCancerViTModel.from_pretrained(model_path)
         model.eval()  # Set model to evaluation mode
         model.to(device)  # Move model to appropriate device
         print(
