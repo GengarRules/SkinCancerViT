@@ -4,7 +4,6 @@ from transformers import AutoImageProcessor
 import os
 
 from skincancer_vit.model import SkinCancerViTModel
-from skincancer_vit.data import load_and_prepare_data, create_preprocessing_function
 
 
 if __name__ == "__main__":
@@ -31,20 +30,6 @@ if __name__ == "__main__":
 
     print(f"Loading model from: {model_path}")
 
-    # Step 1: Load and Prepare Data (to get mappings for preprocessing)
-    # Use load_and_prepare_data from main.py to get the mappings (label2id, id2label, etc.)
-    # We load the full dataset to ensure all mappings are consistent with training.
-    (
-        full_dataset_for_mappings,
-        label2id,
-        id2label,
-        num_dx_labels,
-        localization_to_id,
-        num_localization_features,
-        normalize_age,
-        total_tabular_features_dim,
-    ) = load_and_prepare_data(num_records_to_use=10000)
-
     # Determine the device to use for inference
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
@@ -68,14 +53,13 @@ if __name__ == "__main__":
         )
         exit()
 
-    # Create Preprocessing Function
-    preprocess_function_inference = create_preprocessing_function(
-        image_processor,
-        label2id,
-        localization_to_id,
-        num_localization_features,
-        normalize_age,
-    )
+    label2id = model.config.label2id
+    id2label = model.config.id2label
+    localization_to_id = model.config.localization_to_id
+    num_localization_features = model.config.num_localization_features
+    age_mean = model.config.age_mean
+    age_std = model.config.age_std
+    total_tabular_features_dim = model.config.total_tabular_features_dim
 
     print("\nDemonstrating inference on a few test samples:")
 
@@ -128,7 +112,7 @@ if __name__ == "__main__":
 
             # Since we are processing one sample at a time, extract the first element
             predicted_class_id = predicted_class_ids[0]
-            predicted_dx = id2label[predicted_class_id]
+            predicted_dx = id2label[str(predicted_class_id)]
 
             print(f"Predicted Diagnosis: '{predicted_dx}'")
             if predicted_dx == true_dx:

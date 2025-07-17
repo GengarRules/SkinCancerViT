@@ -15,12 +15,28 @@ class SkinCancerViTModelConfig(PretrainedConfig):
         vision_model_checkpoint="google/vit-base-patch16-224-in21k",
         total_tabular_features_dim=None,
         num_dx_labels=None,
+        id2label=None,  # Dictionary mapping ID to label string
+        label2id=None,  # Dictionary mapping label string to ID
+        localization_to_id=None,  # Dictionary mapping localization string to ID
+        num_localization_features=None,  # Total number of localization categories
+        age_mean=None,  # Mean for age normalization
+        age_std=None,  # Standard deviation for age normalization
+        age_min=None,  # Min age for age normalization
+        age_max=None,  # Min age for age normalization
         **kwargs,
     ):
         super().__init__(**kwargs)
         self.vision_model_checkpoint = vision_model_checkpoint
         self.total_tabular_features_dim = total_tabular_features_dim
         self.num_dx_labels = num_dx_labels
+        self.id2label = id2label
+        self.label2id = label2id
+        self.localization_to_id = localization_to_id
+        self.num_localization_features = num_localization_features
+        self.age_mean = age_mean
+        self.age_std = age_std
+        self.age_min = age_min
+        self.age_max = age_max
 
 
 class SkinCancerViTModel(PreTrainedModel):
@@ -53,7 +69,6 @@ class SkinCancerViTModel(PreTrainedModel):
         # Loss function
         self.loss_fct = nn.CrossEntropyLoss()
 
-        # Initialize weights for custom layers (tabular_mlp, classifier)
         # This calls PreTrainedModel's post_init which handles default initialization
         self.post_init()
 
@@ -85,7 +100,7 @@ class SkinCancerViTModel(PreTrainedModel):
         # Return a dictionary containing loss and logits
         return {"loss": loss, "logits": logits}
 
-    @torch.no_grad()  # Ensure no gradients are computed for inference
+    @torch.no_grad()
     def predict(self, pixel_values, tabular_features, device="cpu"):
         """
         Performs inference on the given input data.

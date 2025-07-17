@@ -72,19 +72,17 @@ def load_and_prepare_data(num_records_to_use=1000):
     localization_names = sorted(list(all_localizations))
     localization_to_id = {name: i for i, name in enumerate(localization_names)}
 
-    min_age = min(all_ages) if all_ages else 0
-    max_age = (
+    age_min = min(all_ages) if all_ages else 0
+    age_max = (
         max(all_ages) if all_ages else 100
     )  # Default if no ages to prevent division by zero
+    age_mean = np.mean(all_ages)
+    age_std = np.std(all_ages)
 
-    def normalize_age(age):
+    def normalize_age_func(age):
         if age is None:
-            # Handle missing age: for simplicity, use 0.0 (normalized value)
-            # This corresponds to the min_age if min_age == max_age, or a normalized average.
-            if max_age == min_age:  # Avoid division by zero if all ages are the same
-                return 0.0
-            return (np.mean(all_ages) - min_age) / (max_age - min_age)
-        return (age - min_age) / (max_age - min_age) if (max_age - min_age) > 0 else 0.0
+            return (age_mean - age_min) / (age_max - age_min)
+        return (age - age_min) / (age_max - age_min) if (age_max - age_min) > 0 else 0.0
 
     num_localization_features = len(localization_names)
     num_age_features = 1  # For normalized age
@@ -101,7 +99,11 @@ def load_and_prepare_data(num_records_to_use=1000):
         num_dx_labels,
         localization_to_id,
         num_localization_features,
-        normalize_age,
+        normalize_age_func,
+        age_mean,
+        age_std,
+        age_min,
+        age_max,
         total_tabular_features_dim,
     )
 
@@ -111,7 +113,7 @@ def create_preprocessing_function(
     label2id,
     localization_to_id,
     num_localization_features,
-    normalize_age,
+    normalize_age_func,
 ):
     """
     Creates and returns the preprocessing function for multimodal data.
@@ -151,7 +153,7 @@ def create_preprocessing_function(
             localization_one_hot[localization_to_id[example["localization"]]] = 1.0
 
         age_normalized = torch.tensor(
-            [normalize_age(example["age"])], dtype=torch.float
+            [normalize_age_func(example["age"])], dtype=torch.float
         )
 
         tabular_features = torch.cat([localization_one_hot, age_normalized])

@@ -96,7 +96,11 @@ if __name__ == "__main__":
         num_dx_labels,
         localization_to_id,
         num_localization_features,
-        normalize_age,
+        normalize_age_func,
+        age_mean,
+        age_std,
+        age_min,
+        age_max,
         total_tabular_features_dim,
     ) = load_and_prepare_data(num_records_to_use=10000)
 
@@ -111,7 +115,7 @@ if __name__ == "__main__":
         label2id,
         localization_to_id,
         num_localization_features,
-        normalize_age,
+        normalize_age_func,
     )
     print("Preprocessing dataset splits...")
     processed_dataset = dataset.map(
@@ -131,6 +135,14 @@ if __name__ == "__main__":
         vision_model_checkpoint=model_checkpoint,
         total_tabular_features_dim=total_tabular_features_dim,
         num_dx_labels=num_dx_labels,
+        id2label=id2label,
+        label2id=label2id,
+        localization_to_id=localization_to_id,
+        num_localization_features=num_localization_features,
+        age_mean=float(age_mean),
+        age_std=float(age_std),
+        age_min=float(age_min),
+        age_max=float(age_max),
     )
     model = SkinCancerViTModel(model_config)  # Initialize with the config object
     print("Multimodal model initialized.")
