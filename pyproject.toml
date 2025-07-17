@@ -1,7 +1,7 @@
 [project]
 name = "skincancervit"
 version = "0.1.0"
-description = "Add your description here"
+description = "A multimodal Vision Transformer model for skin cancer diagnosis, combining image and tabular data."
 readme = "README.md"
 requires-python = ">=3.11.11"
 dependencies = [
@@ -50,3 +50,12 @@ docstring-code-line-length = "dynamic"
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"  # Accepts: "google", "numpy", or "pep257".
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["skincancer_vit"]
+exclude = ["results*"]
