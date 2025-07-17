@@ -60,6 +60,17 @@ if __name__ == "__main__":
     age_mean = model.config.age_mean
     age_std = model.config.age_std
     total_tabular_features_dim = model.config.total_tabular_features_dim
+    age_min = model.config.age_min
+    age_max = model.config.age_max
+
+    def normalize_age_func_reconstructed(age_value):
+        if age_value is None:
+            return (age_mean - age_min) / (age_max - age_min)
+        return (
+            (age_value - age_min) / (age_max - age_min)
+            if (age_max - age_min) > 0
+            else 0.0
+        )
 
     print("\nDemonstrating inference on a few test samples:")
 
@@ -95,7 +106,9 @@ if __name__ == "__main__":
             if localization in localization_to_id:
                 localization_one_hot[localization_to_id[localization]] = 1.0
 
-            age_normalized = torch.tensor([age], dtype=torch.float)
+            age_normalized = torch.tensor(
+                [normalize_age_func_reconstructed(age)], dtype=torch.float
+            )
 
             tabular_features = torch.cat(
                 [localization_one_hot, age_normalized]
