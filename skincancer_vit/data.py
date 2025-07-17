@@ -11,22 +11,8 @@ class CustomDataCollator:
         labels_to_stack = []
 
         for f in features:
-            # Keep unwrapping if it's a list and contains elements
-            # This unwrapping logic is kept for safety, but with set_format, pixel_values should ideally already be tensors.
-            px_val = f["pixel_values"]
-            while isinstance(px_val, list) and len(px_val) > 0:
-                px_val = px_val[0]  # Get the first element if it's a list
-
-            pixel_values_to_stack.append(px_val)
-
-            # Apply the same logic
-            tab_val = f["tabular_features"]
-            while isinstance(tab_val, list) and len(tab_val) > 0:
-                tab_val = tab_val[0]
-
-            tabular_features_to_stack.append(tab_val)
-
-            # Labels are typically integers
+            pixel_values_to_stack.append(f["pixel_values"])
+            tabular_features_to_stack.append(f["tabular_features"])
             labels_to_stack.append(f["labels"])
 
         pixel_values = torch.stack(pixel_values_to_stack)
