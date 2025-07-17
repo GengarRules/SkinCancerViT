@@ -4,7 +4,9 @@ from transformers import (
     AutoModel,
     PreTrainedModel,
     PretrainedConfig,
+    AutoImageProcessor,
 )
+from typing import Any, Tuple
 
 
 class SkinCancerViTModelConfig(PretrainedConfig):
@@ -71,6 +73,10 @@ class SkinCancerViTModel(PreTrainedModel):
 
         # This calls PreTrainedModel's post_init which handles default initialization
         self.post_init()
+
+        self.image_processor = AutoImageProcessor.from_pretrained(
+            config.vision_model_checkpoint
+        )
 
     def forward(self, pixel_values, tabular_features, labels=None):
         # Process image data
@@ -143,3 +149,74 @@ class SkinCancerViTModel(PreTrainedModel):
             predicted_class_probabilities.cpu().tolist(),
             probabilities.cpu().tolist(),
         )
+
+    @torch.no_grad()
+    def full_predict(
+        self, raw_image: Any, raw_age: int, raw_localization: str, device: str = "cpu"
+    ) -> Tuple[str, float]:
+        """
+        Performs the complete inference pipeline from raw inputs to a human-readable prediction.
+        Combines preprocessing, model inference, and postprocessing.
+
+        Args:
+            raw_image (Any): The raw image input (e.g., PIL.Image.Image).
+            raw_age (int): The raw age of the patient.
+            raw_localization (str): The raw localization string.
+            device (str): The device to run inference on ('cpu' or 'cuda').
+
+        Returns:
+            Tuple[str, float]: A tuple containing:
+                - predicted_dx_label (str): The human-readable diagnosis label.
+                - predicted_confidence_score (float): The confidence score for the predicted label.
+        """
+        self.eval()  # Ensure model is in evaluation mode
+        self.to(device)  # Move model to target device
+
+        # Image preprocessing
+        img_rgb = raw_image.convert("RGB")
+        processed_img = self.image_processor(img_rgb, return_tensors="pt")
+        pixel_values = processed_img["pixel_values"].to(device)  # Move to device here
+
+        # Tabular features preprocessing
+        localization_one_hot = torch.zeros(
+            self.config.num_localization_features, device=device
+        )
+        if raw_localization in self.config.localization_to_id:
+            localization_one_hot[self.config.localization_to_id[raw_localization]] = 1.0
+
+        def normalize_age_func_reconstructed(age_value):
+            if age_value is None:
+                return (self.config.age_mean - self.config.age_min) / (
+                    self.config.age_max - self.config.age_min
+                )
+            return (
+                (age_value - self.config.age_min)
+                / (self.config.age_max - self.config.age_min)
+                if (self.config.age_max - self.config.age_min) > 0
+                else 0.0
+            )
+
+        age_normalized_value = normalize_age_func_reconstructed(raw_age)
+        age_normalized = torch.tensor(
+            [age_normalized_value], dtype=torch.float, device=device
+        )
+
+        tabular_features = torch.cat([localization_one_hot, age_normalized]).unsqueeze(
+            0
+        )  # Add batch dimension (1, total_features_dim)
+
+        # Model Inference
+        predicted_class_ids_list, predicted_probabilities_list, _ = self.predict(
+            pixel_values=pixel_values,
+            tabular_features=tabular_features,
+            device=device,  # Pass device to predict
+        )
+
+        # Since full_predict handles single sample, extract first element
+        predicted_class_id = predicted_class_ids_list[0]
+        predicted_confidence_score = predicted_probabilities_list[0]
+
+        # Postprocessing
+        predicted_dx_label = self.config.id2label[str(predicted_class_id)]
+
+        return predicted_dx_label, predicted_confidence_score

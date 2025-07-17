@@ -29,7 +29,7 @@ The training utilized ~10k records.
 
 ## Key Achievements & Performance
 
-The SkinCancerViT model achieved **96% success rate** on 1000 test samples, demonstrating its exceptional capability in distinguishing between various skin cancer diagnoses.
+The SkinCancerViT model achieved **97.30% success rate** on 1000 test samples, demonstrating its exceptional capability in distinguishing between various skin cancer diagnoses.
 
 This high performance underscores the effectiveness of the multimodal approach in capturing complex patterns from both visual and clinical data.
 

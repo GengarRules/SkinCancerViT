@@ -1,6 +1,5 @@
 import torch
 from datasets import load_dataset
-from transformers import AutoImageProcessor
 import os
 
 from skincancer_vit.model import SkinCancerViTModel
@@ -34,15 +33,9 @@ if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
-    # Step 2: Load Image Processor
-    model_checkpoint_name = "google/vit-base-patch16-224-in21k"
-    image_processor = AutoImageProcessor.from_pretrained(model_checkpoint_name)
-    print("Image processor loaded.")
-
-    # Step 3: Load the trained SkinCancerViTModel using from_pretrained
+    # Load the trained SkinCancerViTModel using from_pretrained
     try:
         model = SkinCancerViTModel.from_pretrained(model_path)
-        # Model's predict method handles setting to eval mode and moving to device
         print(
             f"Trained model loaded successfully from '{model_path}' using from_pretrained."
         )
@@ -52,25 +45,6 @@ if __name__ == "__main__":
             f"Ensure 'config.json' and 'model.safetensors' are present and valid."
         )
         exit()
-
-    label2id = model.config.label2id
-    id2label = model.config.id2label
-    localization_to_id = model.config.localization_to_id
-    num_localization_features = model.config.num_localization_features
-    age_mean = model.config.age_mean
-    age_std = model.config.age_std
-    total_tabular_features_dim = model.config.total_tabular_features_dim
-    age_min = model.config.age_min
-    age_max = model.config.age_max
-
-    def normalize_age_func_reconstructed(age_value):
-        if age_value is None:
-            return (age_mean - age_min) / (age_max - age_min)
-        return (
-            (age_value - age_min) / (age_max - age_min)
-            if (age_max - age_min) > 0
-            else 0.0
-        )
 
     print("\nDemonstrating inference on a few test samples:")
 
@@ -96,39 +70,23 @@ if __name__ == "__main__":
         )
 
         try:
-            # Preprocess Image
-            img_rgb = pil_image.convert("RGB")
-            processed_img = image_processor(img_rgb, return_tensors="pt")
-            pixel_values = processed_img["pixel_values"]  # (1, C, H, W)
-
-            # Preprocess Tabular Features
-            localization_one_hot = torch.zeros(num_localization_features)
-            if localization in localization_to_id:
-                localization_one_hot[localization_to_id[localization]] = 1.0
-
-            age_normalized = torch.tensor(
-                [normalize_age_func_reconstructed(age)], dtype=torch.float
+            # Use the model's full_predict method directly
+            # This method handles all preprocessing, inference, and postprocessing internally.
+            predicted_dx, predicted_confidence = model.full_predict(
+                raw_image=pil_image,
+                raw_age=age,
+                raw_localization=localization,
+                device=device,  # Pass the device to the full_predict method
             )
+            # full_predict returns a single label string and a single float confidence
+            # So, no need to extract from lists or convert ID to string.
+            predicted_dx_label = predicted_dx
+            predicted_confidence_score = predicted_confidence
 
-            tabular_features = torch.cat(
-                [localization_one_hot, age_normalized]
-            ).unsqueeze(0)  # Add batch dimension
-
-            # Perform Inference using the model's predict method
-            predicted_class_ids, predicted_probabilities, all_class_probabilities = (
-                model.predict(
-                    pixel_values=pixel_values,
-                    tabular_features=tabular_features,
-                    device=device,
-                )
+            print(
+                f"Predicted Diagnosis: '{predicted_dx_label}' (Confidence: {predicted_confidence_score:.4f})"
             )
-
-            # Since we are processing one sample at a time, extract the first element
-            predicted_class_id = predicted_class_ids[0]
-            predicted_dx = id2label[str(predicted_class_id)]
-
-            print(f"Predicted Diagnosis: '{predicted_dx}'")
-            if predicted_dx == true_dx:
+            if predicted_dx_label == true_dx:
                 print("Prediction: CORRECT")
                 correct_predictions += 1
             else:
