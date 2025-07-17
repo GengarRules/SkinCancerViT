@@ -78,11 +78,10 @@ def load_and_prepare_data(num_records_to_use=1000):
     all_localizations = set()
     all_ages = []
 
-    for split in dataset:
-        for example in dataset[split]:
-            all_localizations.add(example["localization"])
-            if example["age"] is not None:
-                all_ages.append(example["age"])
+    for example in dataset["train"]:
+        all_localizations.add(example["localization"])
+        if example["age"] is not None:
+            all_ages.append(example["age"])
 
     localization_names = sorted(list(all_localizations))
     localization_to_id = {name: i for i, name in enumerate(localization_names)}
