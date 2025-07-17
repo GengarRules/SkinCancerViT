@@ -57,10 +57,9 @@ if __name__ == "__main__":
     # Step 3: Load the trained SkinCancerViTModel using from_pretrained
     try:
         model = SkinCancerViTModel.from_pretrained(model_path)
-        model.eval()  # Set model to evaluation mode
-        model.to(device)  # Move model to appropriate device
+        # Model's predict method handles setting to eval mode and moving to device
         print(
-            f"Trained model loaded successfully from '{model_path}' using from_pretrained and set to evaluation mode."
+            f"Trained model loaded successfully from '{model_path}' using from_pretrained."
         )
     except Exception as e:
         print(
@@ -90,55 +89,55 @@ if __name__ == "__main__":
     correct_predictions = 0
     total_samples_demonstrated = len(test_samples_raw)
 
-    with torch.no_grad():  # Disable gradient calculation for inference
-        for i, example in enumerate(test_samples_raw):
-            pil_image = example["image"]
-            age = example["age"]
-            localization = example["localization"]
-            true_dx = example["dx"]
+    for i, example in enumerate(test_samples_raw):
+        pil_image = example["image"]
+        age = example["age"]
+        localization = example["localization"]
+        true_dx = example["dx"]
 
-            print(f"\n--- Sample {i + 1} ---")
-            print(
-                f"Input: Age={age}, Localization='{localization}', True Diagnosis='{true_dx}'"
+        print(f"\n--- Sample {i + 1} ---")
+        print(
+            f"Input: Age={age}, Localization='{localization}', True Diagnosis='{true_dx}'"
+        )
+
+        try:
+            # Preprocess Image
+            img_rgb = pil_image.convert("RGB")
+            processed_img = image_processor(img_rgb, return_tensors="pt")
+            pixel_values = processed_img["pixel_values"]  # (1, C, H, W)
+
+            # Preprocess Tabular Features
+            localization_one_hot = torch.zeros(num_localization_features)
+            if localization in localization_to_id:
+                localization_one_hot[localization_to_id[localization]] = 1.0
+
+            age_normalized = torch.tensor([age], dtype=torch.float)
+
+            tabular_features = torch.cat(
+                [localization_one_hot, age_normalized]
+            ).unsqueeze(0)  # Add batch dimension
+
+            # Perform Inference using the model's predict method
+            predicted_class_ids, predicted_probabilities, all_class_probabilities = (
+                model.predict(
+                    pixel_values=pixel_values,
+                    tabular_features=tabular_features,
+                    device=device,
+                )
             )
 
-            try:
-                # Preprocess Image
-                img_rgb = pil_image.convert("RGB")
-                processed_img = image_processor(img_rgb, return_tensors="pt").to(device)
-                pixel_values = processed_img[
-                    "pixel_values"
-                ]  # Already has batch dimension (1, C, H, W)
+            # Since we are processing one sample at a time, extract the first element
+            predicted_class_id = predicted_class_ids[0]
+            predicted_dx = id2label[predicted_class_id]
 
-                # Preprocess Tabular Features
-                localization_one_hot = torch.zeros(
-                    num_localization_features, device=device
-                )
-                if localization in localization_to_id:
-                    localization_one_hot[localization_to_id[localization]] = 1.0
-
-                age_normalized = torch.tensor([age], dtype=torch.float, device=device)
-
-                tabular_features = torch.cat(
-                    [localization_one_hot, age_normalized]
-                ).unsqueeze(0)  # Add batch dimension
-
-                # Perform Inference
-                outputs = model(
-                    pixel_values=pixel_values, tabular_features=tabular_features
-                )
-                logits = outputs["logits"]
-                predicted_class_id = torch.argmax(logits, dim=-1).item()
-                predicted_dx = id2label[predicted_class_id]
-
-                print(f"Predicted Diagnosis: '{predicted_dx}'")
-                if predicted_dx == true_dx:
-                    print("Prediction: CORRECT")
-                    correct_predictions += 1
-                else:
-                    print("Prediction: INCORRECT")
-            except Exception as e:
-                print(f"Error during prediction for sample {i + 1}: {e}")
+            print(f"Predicted Diagnosis: '{predicted_dx}'")
+            if predicted_dx == true_dx:
+                print("Prediction: CORRECT")
+                correct_predictions += 1
+            else:
+                print("Prediction: INCORRECT")
+        except Exception as e:
+            print(f"Error during prediction for sample {i + 1}: {e}")
 
     print("\nInference demonstration complete.")
 

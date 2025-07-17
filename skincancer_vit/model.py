@@ -84,3 +84,47 @@ class SkinCancerViTModel(PreTrainedModel):
 
         # Return a dictionary containing loss and logits
         return {"loss": loss, "logits": logits}
+
+    @torch.no_grad()  # Ensure no gradients are computed for inference
+    def predict(self, pixel_values, tabular_features, device="cpu"):
+        """
+        Performs inference on the given input data.
+
+        Args:
+            pixel_values (torch.Tensor): Preprocessed image tensor (batch_size, channels, height, width).
+            tabular_features (torch.Tensor): Preprocessed tabular features tensor (batch_size, num_tabular_features).
+            device (str or torch.device): The device to run inference on ('cpu' or 'cuda').
+
+        Returns:
+            tuple: A tuple containing:
+                - predicted_class_ids (list): List of predicted class IDs.
+                - predicted_probabilities (list): List of class probabilities for the predicted class.
+                - all_class_probabilities (list): List of probability distributions over all classes.
+        """
+        # Set the model to evaluation mode
+        self.eval()
+        self.to(device)
+
+        # Move inputs to the specified device
+        pixel_values = pixel_values.to(device)
+        tabular_features = tabular_features.to(device)
+
+        # Perform forward pass
+        outputs = self.forward(
+            pixel_values=pixel_values, tabular_features=tabular_features
+        )
+        logits = outputs["logits"]
+
+        # Apply softmax to get probabilities
+        probabilities = torch.softmax(logits, dim=-1)
+
+        # Get predicted class ID and probability
+        predicted_class_probabilities, predicted_class_ids = torch.max(
+            probabilities, dim=-1
+        )
+
+        return (
+            predicted_class_ids.cpu().tolist(),
+            predicted_class_probabilities.cpu().tolist(),
+            probabilities.cpu().tolist(),
+        )
