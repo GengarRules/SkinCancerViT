@@ -1,0 +1,1286 @@
+sample_id,true_diagnosis,predicted_diagnosis,confidence,is_correct,age,localization
+1,melanoma,melanoma,0.9834308624267578,True,55.0,back
+2,melanocytic_Nevi,melanocytic_Nevi,0.9987671375274658,True,55.0,lower extremity
+3,melanocytic_Nevi,melanocytic_Nevi,0.9969398975372314,True,,chest
+4,actinic_keratoses,actinic_keratoses,0.977965772151947,True,55.0,face
+5,melanocytic_Nevi,melanocytic_Nevi,0.9968728423118591,True,35.0,lower extremity
+6,melanocytic_Nevi,melanocytic_Nevi,0.9918497800827026,True,35.0,back
+7,melanocytic_Nevi,melanocytic_Nevi,0.9969301819801331,True,30.0,abdomen
+8,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9899237751960754,True,45.0,face
+9,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9883147478103638,True,60.0,back
+10,basal_cell_carcinoma,basal_cell_carcinoma,0.9877891540527344,True,70.0,face
+11,melanocytic_Nevi,melanocytic_Nevi,0.9991376399993896,True,35.0,lower extremity
+12,melanocytic_Nevi,melanocytic_Nevi,0.9990822076797485,True,25.0,upper extremity
+13,melanocytic_Nevi,melanocytic_Nevi,0.9985111355781555,True,50.0,upper extremity
+14,melanocytic_Nevi,melanocytic_Nevi,0.997622549533844,True,75.0,lower extremity
+15,melanocytic_Nevi,melanocytic_Nevi,0.9945949912071228,True,75.0,trunk
+16,melanocytic_Nevi,melanocytic_Nevi,0.9989385008811951,True,45.0,abdomen
+17,melanocytic_Nevi,melanocytic_Nevi,0.9963676929473877,True,40.0,unknown
+18,melanocytic_Nevi,melanocytic_Nevi,0.9991346001625061,True,55.0,lower extremity
+19,melanocytic_Nevi,melanocytic_Nevi,0.99899822473526,True,50.0,trunk
+20,vascular_lesions,vascular_lesions,0.9863828420639038,True,55.0,back
+21,melanocytic_Nevi,melanocytic_Nevi,0.9794990420341492,True,55.0,neck
+22,melanoma,melanoma,0.9903083443641663,True,65.0,lower extremity
+23,melanocytic_Nevi,melanocytic_Nevi,0.9789808392524719,True,35.0,back
+24,melanocytic_Nevi,melanocytic_Nevi,0.9988600015640259,True,45.0,abdomen
+25,melanocytic_Nevi,melanocytic_Nevi,0.9917559623718262,True,60.0,lower extremity
+26,melanocytic_Nevi,melanocytic_Nevi,0.9990875720977783,True,65.0,lower extremity
+27,melanocytic_Nevi,melanocytic_Nevi,0.9983397722244263,True,45.0,trunk
+28,basal_cell_carcinoma,basal_cell_carcinoma,0.9646807312965393,True,65.0,back
+29,melanocytic_Nevi,melanocytic_Nevi,0.9984788298606873,True,45.0,lower extremity
+30,melanocytic_Nevi,melanocytic_Nevi,0.9952802658081055,True,35.0,back
+31,basal_cell_carcinoma,basal_cell_carcinoma,0.9880394339561462,True,45.0,back
+32,melanocytic_Nevi,melanocytic_Nevi,0.983336865901947,True,40.0,trunk
+33,melanoma,melanoma,0.9851861596107483,True,65.0,foot
+34,melanocytic_Nevi,melanocytic_Nevi,0.9989805817604065,True,45.0,trunk
+35,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9494963884353638,True,,unknown
+36,melanocytic_Nevi,melanocytic_Nevi,0.9990357160568237,True,50.0,upper extremity
+37,melanocytic_Nevi,melanocytic_Nevi,0.9904741644859314,True,70.0,back
+38,basal_cell_carcinoma,basal_cell_carcinoma,0.9893292784690857,True,65.0,back
+39,melanocytic_Nevi,melanocytic_Nevi,0.9986650943756104,True,40.0,back
+40,melanocytic_Nevi,melanocytic_Nevi,0.998687207698822,True,80.0,lower extremity
+41,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.986946702003479,True,70.0,trunk
+42,melanocytic_Nevi,benign_keratosis-like_lesions,0.5756450295448303,False,65.0,back
+43,melanocytic_Nevi,melanocytic_Nevi,0.996649444103241,True,70.0,lower extremity
+44,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.970625102519989,True,75.0,hand
+45,melanoma,melanocytic_Nevi,0.6358823180198669,False,50.0,lower extremity
+46,basal_cell_carcinoma,basal_cell_carcinoma,0.9806933999061584,True,80.0,foot
+47,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9925222992897034,True,,unknown
+48,melanocytic_Nevi,melanocytic_Nevi,0.9886531233787537,True,35.0,upper extremity
+49,melanocytic_Nevi,melanocytic_Nevi,0.998047947883606,True,15.0,foot
+50,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9433155655860901,True,70.0,face
+51,melanocytic_Nevi,melanocytic_Nevi,0.99355548620224,True,75.0,face
+52,melanocytic_Nevi,melanocytic_Nevi,0.9955273270606995,True,35.0,back
+53,melanocytic_Nevi,melanocytic_Nevi,0.9814245104789734,True,75.0,ear
+54,melanocytic_Nevi,melanocytic_Nevi,0.9990794658660889,True,60.0,trunk
+55,melanocytic_Nevi,melanocytic_Nevi,0.9965643286705017,True,40.0,lower extremity
+56,melanocytic_Nevi,melanocytic_Nevi,0.9827258586883545,True,50.0,ear
+57,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9855114221572876,True,65.0,back
+58,melanocytic_Nevi,melanocytic_Nevi,0.9883096218109131,True,75.0,upper extremity
+59,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9937815070152283,True,70.0,back
+60,melanocytic_Nevi,melanocytic_Nevi,0.9990577101707458,True,45.0,trunk
+61,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9471322298049927,True,55.0,lower extremity
+62,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9898828864097595,True,85.0,face
+63,melanocytic_Nevi,melanocytic_Nevi,0.9937026500701904,True,45.0,back
+64,melanocytic_Nevi,melanocytic_Nevi,0.9977327585220337,True,40.0,foot
+65,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9869534373283386,True,60.0,lower extremity
+66,melanocytic_Nevi,melanocytic_Nevi,0.9988065958023071,True,80.0,trunk
+67,melanocytic_Nevi,melanocytic_Nevi,0.998515784740448,True,40.0,unknown
+68,melanocytic_Nevi,melanocytic_Nevi,0.9870026111602783,True,60.0,upper extremity
+69,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9914649128913879,True,75.0,back
+70,basal_cell_carcinoma,basal_cell_carcinoma,0.9796934127807617,True,60.0,trunk
+71,melanocytic_Nevi,melanocytic_Nevi,0.9879457950592041,True,65.0,abdomen
+72,melanocytic_Nevi,melanocytic_Nevi,0.9916898012161255,True,50.0,upper extremity
+73,melanocytic_Nevi,melanocytic_Nevi,0.998954176902771,True,55.0,lower extremity
+74,melanocytic_Nevi,melanocytic_Nevi,0.9973070621490479,True,25.0,back
+75,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9804103970527649,True,80.0,face
+76,melanoma,melanoma,0.9307869076728821,True,85.0,abdomen
+77,melanocytic_Nevi,melanocytic_Nevi,0.9973764419555664,True,35.0,upper extremity
+78,melanocytic_Nevi,melanocytic_Nevi,0.9922107458114624,True,55.0,unknown
+79,benign_keratosis-like_lesions,melanocytic_Nevi,0.99810791015625,False,55.0,trunk
+80,benign_keratosis-like_lesions,melanoma,0.9656538367271423,False,75.0,chest
+81,actinic_keratoses,actinic_keratoses,0.9595828652381897,True,55.0,hand
+82,melanocytic_Nevi,melanocytic_Nevi,0.9990187883377075,True,55.0,trunk
+83,melanocytic_Nevi,melanocytic_Nevi,0.9987364411354065,True,45.0,back
+84,melanocytic_Nevi,melanocytic_Nevi,0.9949716329574585,True,30.0,back
+85,melanocytic_Nevi,melanocytic_Nevi,0.9990345239639282,True,50.0,lower extremity
+86,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.7671302556991577,True,50.0,back
+87,melanocytic_Nevi,melanocytic_Nevi,0.9951497912406921,True,60.0,lower extremity
+88,melanocytic_Nevi,melanocytic_Nevi,0.4677523076534271,True,40.0,back
+89,melanocytic_Nevi,melanocytic_Nevi,0.999068558216095,True,45.0,trunk
+90,melanocytic_Nevi,melanocytic_Nevi,0.9646801948547363,True,35.0,chest
+91,melanocytic_Nevi,melanocytic_Nevi,0.9552188515663147,True,50.0,upper extremity
+92,melanocytic_Nevi,melanocytic_Nevi,0.9991273283958435,True,65.0,trunk
+93,melanocytic_Nevi,melanocytic_Nevi,0.999177873134613,True,60.0,trunk
+94,melanoma,melanoma,0.9893428087234497,True,55.0,upper extremity
+95,melanoma,melanoma,0.9771579504013062,True,60.0,back
+96,melanocytic_Nevi,melanocytic_Nevi,0.7525510787963867,True,65.0,back
+97,melanocytic_Nevi,melanocytic_Nevi,0.9971972703933716,True,35.0,foot
+98,basal_cell_carcinoma,basal_cell_carcinoma,0.9794091582298279,True,75.0,back
+99,melanocytic_Nevi,melanocytic_Nevi,0.999100923538208,True,45.0,lower extremity
+100,melanocytic_Nevi,melanocytic_Nevi,0.9977357387542725,True,70.0,face
+101,melanocytic_Nevi,melanocytic_Nevi,0.9917987585067749,True,40.0,lower extremity
+102,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9920603036880493,True,55.0,face
+103,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9803921580314636,True,85.0,back
+104,melanocytic_Nevi,melanocytic_Nevi,0.9990329742431641,True,55.0,lower extremity
+105,melanocytic_Nevi,melanocytic_Nevi,0.9989663362503052,True,45.0,back
+106,melanocytic_Nevi,melanocytic_Nevi,0.996893048286438,True,35.0,upper extremity
+107,basal_cell_carcinoma,basal_cell_carcinoma,0.9803646802902222,True,40.0,back
+108,melanocytic_Nevi,melanocytic_Nevi,0.9987533092498779,True,45.0,abdomen
+109,melanocytic_Nevi,melanocytic_Nevi,0.9966027736663818,True,25.0,unknown
+110,melanocytic_Nevi,melanocytic_Nevi,0.9976038336753845,True,25.0,lower extremity
+111,basal_cell_carcinoma,basal_cell_carcinoma,0.98366779088974,True,55.0,back
+112,melanocytic_Nevi,melanocytic_Nevi,0.9990781545639038,True,55.0,back
+113,melanocytic_Nevi,melanocytic_Nevi,0.9974881410598755,True,30.0,back
+114,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9875189661979675,True,75.0,back
+115,melanocytic_Nevi,melanocytic_Nevi,0.9967231154441833,True,40.0,lower extremity
+116,melanocytic_Nevi,melanocytic_Nevi,0.9989593029022217,True,65.0,trunk
+117,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9921063184738159,True,75.0,back
+118,melanocytic_Nevi,melanocytic_Nevi,0.9991437196731567,True,40.0,lower extremity
+119,melanocytic_Nevi,melanocytic_Nevi,0.9990045428276062,True,45.0,abdomen
+120,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.988987147808075,True,80.0,back
+121,melanocytic_Nevi,melanocytic_Nevi,0.995612382888794,True,70.0,hand
+122,melanocytic_Nevi,melanocytic_Nevi,0.9990411400794983,True,50.0,abdomen
+123,melanocytic_Nevi,melanocytic_Nevi,0.9987791180610657,True,60.0,genital
+124,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.987322986125946,True,65.0,face
+125,melanocytic_Nevi,melanocytic_Nevi,0.9990074038505554,True,50.0,trunk
+126,melanocytic_Nevi,melanocytic_Nevi,0.999019980430603,True,55.0,trunk
+127,melanocytic_Nevi,melanocytic_Nevi,0.9988960027694702,True,50.0,trunk
+128,melanocytic_Nevi,melanocytic_Nevi,0.9980047345161438,True,25.0,unknown
+129,basal_cell_carcinoma,basal_cell_carcinoma,0.9828137159347534,True,70.0,lower extremity
+130,melanocytic_Nevi,melanocytic_Nevi,0.9756419062614441,True,55.0,foot
+131,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.937641441822052,True,65.0,scalp
+132,melanocytic_Nevi,melanocytic_Nevi,0.993732750415802,True,50.0,upper extremity
+133,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.8597186803817749,True,70.0,lower extremity
+134,melanocytic_Nevi,melanocytic_Nevi,0.9949171543121338,True,35.0,lower extremity
+135,actinic_keratoses,actinic_keratoses,0.7815143465995789,True,60.0,back
+136,melanocytic_Nevi,melanocytic_Nevi,0.9990824460983276,True,50.0,upper extremity
+137,melanocytic_Nevi,melanocytic_Nevi,0.9906948804855347,True,55.0,lower extremity
+138,melanocytic_Nevi,melanocytic_Nevi,0.9990897178649902,True,50.0,trunk
+139,melanocytic_Nevi,melanocytic_Nevi,0.9991528987884521,True,50.0,back
+140,melanoma,melanoma,0.9841342568397522,True,75.0,ear
+141,melanocytic_Nevi,melanocytic_Nevi,0.9981492757797241,True,45.0,trunk
+142,melanocytic_Nevi,melanocytic_Nevi,0.9989879727363586,True,35.0,trunk
+143,melanocytic_Nevi,melanocytic_Nevi,0.9990768432617188,True,45.0,upper extremity
+144,melanocytic_Nevi,melanocytic_Nevi,0.970609724521637,True,55.0,lower extremity
+145,actinic_keratoses,actinic_keratoses,0.9623790979385376,True,45.0,face
+146,melanocytic_Nevi,melanocytic_Nevi,0.9978088736534119,True,55.0,back
+147,melanocytic_Nevi,melanocytic_Nevi,0.9910085797309875,True,20.0,lower extremity
+148,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9912272095680237,True,45.0,back
+149,melanocytic_Nevi,benign_keratosis-like_lesions,0.5579462051391602,False,60.0,lower extremity
+150,melanoma,melanoma,0.9870644807815552,True,45.0,upper extremity
+151,melanocytic_Nevi,melanocytic_Nevi,0.9977705478668213,True,55.0,back
+152,melanocytic_Nevi,melanocytic_Nevi,0.9986547231674194,True,65.0,abdomen
+153,melanocytic_Nevi,melanocytic_Nevi,0.9977580904960632,True,45.0,lower extremity
+154,melanocytic_Nevi,melanocytic_Nevi,0.9982813596725464,True,65.0,back
+155,melanocytic_Nevi,melanocytic_Nevi,0.998675525188446,True,60.0,upper extremity
+156,melanocytic_Nevi,melanocytic_Nevi,0.9980200529098511,True,60.0,abdomen
+157,melanocytic_Nevi,melanocytic_Nevi,0.9988080263137817,True,50.0,lower extremity
+158,melanocytic_Nevi,melanocytic_Nevi,0.9986615180969238,True,50.0,trunk
+159,melanoma,melanoma,0.9867499470710754,True,55.0,back
+160,melanocytic_Nevi,melanocytic_Nevi,0.9990684390068054,True,70.0,abdomen
+161,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9846254587173462,True,50.0,neck
+162,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.6410565376281738,True,75.0,face
+163,melanocytic_Nevi,melanocytic_Nevi,0.9989432692527771,True,65.0,back
+164,melanoma,melanoma,0.9879228472709656,True,60.0,face
+165,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9710032939910889,True,70.0,back
+166,melanoma,melanoma,0.9900782108306885,True,50.0,back
+167,melanocytic_Nevi,melanocytic_Nevi,0.9921895265579224,True,25.0,unknown
+168,melanocytic_Nevi,melanocytic_Nevi,0.9984933137893677,True,55.0,lower extremity
+169,melanocytic_Nevi,melanocytic_Nevi,0.9634363055229187,True,60.0,trunk
+170,melanocytic_Nevi,melanocytic_Nevi,0.9956240057945251,True,30.0,upper extremity
+171,melanocytic_Nevi,melanocytic_Nevi,0.9991461038589478,True,40.0,trunk
+172,melanocytic_Nevi,melanocytic_Nevi,0.9952261447906494,True,40.0,back
+173,melanocytic_Nevi,melanocytic_Nevi,0.9908254742622375,True,30.0,upper extremity
+174,basal_cell_carcinoma,basal_cell_carcinoma,0.9423999190330505,True,85.0,face
+175,melanoma,melanoma,0.9141299724578857,True,75.0,abdomen
+176,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9869179129600525,True,50.0,upper extremity
+177,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9694105386734009,True,75.0,chest
+178,melanocytic_Nevi,melanocytic_Nevi,0.9990617632865906,True,55.0,upper extremity
+179,melanoma,melanoma,0.8715821504592896,True,70.0,back
+180,basal_cell_carcinoma,basal_cell_carcinoma,0.9718540906906128,True,35.0,face
+181,melanocytic_Nevi,melanocytic_Nevi,0.9989773035049438,True,35.0,abdomen
+182,actinic_keratoses,actinic_keratoses,0.8035150766372681,True,70.0,lower extremity
+183,melanocytic_Nevi,melanocytic_Nevi,0.9988045692443848,True,40.0,lower extremity
+184,melanocytic_Nevi,melanocytic_Nevi,0.9938424825668335,True,75.0,lower extremity
+185,melanocytic_Nevi,melanocytic_Nevi,0.9976053237915039,True,35.0,back
+186,melanocytic_Nevi,melanocytic_Nevi,0.9986883997917175,True,5.0,back
+187,actinic_keratoses,actinic_keratoses,0.9371942281723022,True,85.0,upper extremity
+188,actinic_keratoses,actinic_keratoses,0.956474244594574,True,75.0,lower extremity
+189,melanoma,melanoma,0.9834344387054443,True,75.0,back
+190,melanoma,melanoma,0.9865031242370605,True,35.0,trunk
+191,melanocytic_Nevi,melanocytic_Nevi,0.9860665202140808,True,35.0,upper extremity
+192,actinic_keratoses,actinic_keratoses,0.9657793641090393,True,65.0,upper extremity
+193,melanocytic_Nevi,melanocytic_Nevi,0.9990516304969788,True,45.0,lower extremity
+194,melanoma,melanoma,0.9688907861709595,True,30.0,trunk
+195,melanoma,melanoma,0.8609821200370789,True,75.0,back
+196,melanocytic_Nevi,melanocytic_Nevi,0.9913455247879028,True,55.0,trunk
+197,melanocytic_Nevi,melanocytic_Nevi,0.9956493973731995,True,40.0,abdomen
+198,melanocytic_Nevi,melanocytic_Nevi,0.9888789653778076,True,70.0,back
+199,melanocytic_Nevi,melanocytic_Nevi,0.9991142153739929,True,45.0,trunk
+200,melanocytic_Nevi,melanocytic_Nevi,0.7161992192268372,True,75.0,unknown
+201,melanocytic_Nevi,melanocytic_Nevi,0.9989498257637024,True,45.0,abdomen
+202,melanocytic_Nevi,melanocytic_Nevi,0.9988609552383423,True,50.0,neck
+203,melanocytic_Nevi,melanocytic_Nevi,0.9976605176925659,True,35.0,back
+204,melanocytic_Nevi,melanocytic_Nevi,0.9970998764038086,True,60.0,trunk
+205,melanocytic_Nevi,melanocytic_Nevi,0.9987034797668457,True,40.0,trunk
+206,melanocytic_Nevi,melanocytic_Nevi,0.9990432858467102,True,50.0,lower extremity
+207,melanoma,melanoma,0.979453980922699,True,80.0,face
+208,melanoma,melanoma,0.9885140061378479,True,70.0,back
+209,melanocytic_Nevi,melanocytic_Nevi,0.9799245595932007,True,65.0,upper extremity
+210,melanoma,melanoma,0.9812630414962769,True,70.0,back
+211,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9845415353775024,True,45.0,chest
+212,melanocytic_Nevi,melanocytic_Nevi,0.9990689158439636,True,45.0,trunk
+213,melanocytic_Nevi,melanocytic_Nevi,0.9988070726394653,True,50.0,back
+214,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9918466806411743,True,80.0,face
+215,melanocytic_Nevi,melanocytic_Nevi,0.9991620779037476,True,35.0,back
+216,melanocytic_Nevi,melanocytic_Nevi,0.9990587830543518,True,60.0,upper extremity
+217,melanocytic_Nevi,melanocytic_Nevi,0.9919541478157043,True,65.0,abdomen
+218,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9873471260070801,True,50.0,lower extremity
+219,melanocytic_Nevi,melanocytic_Nevi,0.999092698097229,True,45.0,trunk
+220,melanocytic_Nevi,melanocytic_Nevi,0.994109034538269,True,85.0,upper extremity
+221,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9860972762107849,True,55.0,trunk
+222,melanocytic_Nevi,melanocytic_Nevi,0.9990341663360596,True,55.0,lower extremity
+223,melanocytic_Nevi,melanocytic_Nevi,0.9896398782730103,True,45.0,back
+224,melanocytic_Nevi,melanocytic_Nevi,0.9955477714538574,True,45.0,lower extremity
+225,melanoma,melanoma,0.9806402921676636,True,65.0,face
+226,melanocytic_Nevi,melanocytic_Nevi,0.9984184503555298,True,25.0,trunk
+227,melanocytic_Nevi,melanocytic_Nevi,0.9971074461936951,True,35.0,back
+228,melanocytic_Nevi,melanocytic_Nevi,0.9973795413970947,True,40.0,unknown
+229,melanocytic_Nevi,melanocytic_Nevi,0.9984720349311829,True,45.0,upper extremity
+230,melanocytic_Nevi,melanocytic_Nevi,0.8868887424468994,True,20.0,lower extremity
+231,melanocytic_Nevi,melanocytic_Nevi,0.9988118410110474,True,35.0,lower extremity
+232,melanoma,melanoma,0.9837835431098938,True,75.0,back
+233,melanocytic_Nevi,melanocytic_Nevi,0.9928970336914062,True,35.0,back
+234,melanocytic_Nevi,melanocytic_Nevi,0.9989979863166809,True,60.0,genital
+235,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.6562546491622925,True,50.0,back
+236,melanoma,melanoma,0.9778016209602356,True,85.0,upper extremity
+237,melanoma,melanoma,0.9880385994911194,True,65.0,back
+238,melanocytic_Nevi,melanocytic_Nevi,0.9987192153930664,True,40.0,unknown
+239,melanocytic_Nevi,melanocytic_Nevi,0.9974576830863953,True,30.0,abdomen
+240,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9919461607933044,True,75.0,lower extremity
+241,melanocytic_Nevi,melanocytic_Nevi,0.9984316229820251,True,40.0,foot
+242,melanocytic_Nevi,melanocytic_Nevi,0.9967368245124817,True,30.0,back
+243,melanocytic_Nevi,melanocytic_Nevi,0.9979689717292786,True,35.0,back
+244,melanoma,melanoma,0.9851897358894348,True,75.0,abdomen
+245,melanocytic_Nevi,melanocytic_Nevi,0.9796249866485596,True,55.0,back
+246,actinic_keratoses,actinic_keratoses,0.49076080322265625,True,65.0,face
+247,melanocytic_Nevi,melanocytic_Nevi,0.9720916152000427,True,50.0,back
+248,melanocytic_Nevi,melanocytic_Nevi,0.982038676738739,True,40.0,back
+249,melanocytic_Nevi,melanocytic_Nevi,0.9794387817382812,True,30.0,back
+250,basal_cell_carcinoma,basal_cell_carcinoma,0.9806978702545166,True,80.0,face
+251,melanocytic_Nevi,melanocytic_Nevi,0.986449658870697,True,45.0,back
+252,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.986724317073822,True,80.0,lower extremity
+253,melanocytic_Nevi,melanocytic_Nevi,0.9949750900268555,True,75.0,ear
+254,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9928694367408752,True,30.0,face
+255,melanocytic_Nevi,melanocytic_Nevi,0.9958322644233704,True,30.0,abdomen
+256,melanocytic_Nevi,melanocytic_Nevi,0.9989657402038574,True,65.0,upper extremity
+257,melanocytic_Nevi,melanocytic_Nevi,0.9990235567092896,True,40.0,foot
+258,melanocytic_Nevi,melanocytic_Nevi,0.9931476712226868,True,60.0,trunk
+259,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9883809089660645,True,50.0,lower extremity
+260,melanocytic_Nevi,melanocytic_Nevi,0.6747775673866272,True,40.0,back
+261,melanocytic_Nevi,melanocytic_Nevi,0.9989174604415894,True,45.0,back
+262,melanocytic_Nevi,melanocytic_Nevi,0.9990429282188416,True,55.0,lower extremity
+263,basal_cell_carcinoma,basal_cell_carcinoma,0.9858127236366272,True,65.0,face
+264,melanocytic_Nevi,melanocytic_Nevi,0.9989680051803589,True,50.0,trunk
+265,melanocytic_Nevi,melanocytic_Nevi,0.9945553541183472,True,75.0,foot
+266,melanocytic_Nevi,melanocytic_Nevi,0.9991053938865662,True,35.0,abdomen
+267,dermatofibroma,dermatofibroma,0.9404029846191406,True,40.0,lower extremity
+268,melanocytic_Nevi,melanocytic_Nevi,0.9991623163223267,True,50.0,abdomen
+269,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9747695922851562,True,70.0,back
+270,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9704470038414001,True,55.0,face
+271,actinic_keratoses,actinic_keratoses,0.896172821521759,True,80.0,upper extremity
+272,melanocytic_Nevi,melanocytic_Nevi,0.9989197254180908,True,75.0,trunk
+273,vascular_lesions,vascular_lesions,0.9362668395042419,True,85.0,upper extremity
+274,actinic_keratoses,actinic_keratoses,0.8868529200553894,True,60.0,face
+275,melanocytic_Nevi,melanocytic_Nevi,0.9430347084999084,True,65.0,back
+276,melanocytic_Nevi,melanocytic_Nevi,0.9985577464103699,True,40.0,lower extremity
+277,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.986930251121521,True,80.0,scalp
+278,melanocytic_Nevi,melanocytic_Nevi,0.9991108775138855,True,65.0,abdomen
+279,melanocytic_Nevi,melanocytic_Nevi,0.9986987113952637,True,45.0,trunk
+280,melanocytic_Nevi,melanocytic_Nevi,0.9991446733474731,True,35.0,trunk
+281,melanocytic_Nevi,melanocytic_Nevi,0.9990350008010864,True,50.0,back
+282,melanocytic_Nevi,melanocytic_Nevi,0.9989662170410156,True,75.0,trunk
+283,melanocytic_Nevi,melanocytic_Nevi,0.9887905120849609,True,0.0,lower extremity
+284,melanocytic_Nevi,melanocytic_Nevi,0.9985865354537964,True,65.0,back
+285,melanocytic_Nevi,melanocytic_Nevi,0.9991462230682373,True,50.0,abdomen
+286,melanocytic_Nevi,melanocytic_Nevi,0.9990842342376709,True,55.0,foot
+287,melanocytic_Nevi,melanocytic_Nevi,0.9989084005355835,True,30.0,trunk
+288,melanocytic_Nevi,melanocytic_Nevi,0.999060332775116,True,65.0,trunk
+289,melanocytic_Nevi,melanocytic_Nevi,0.9961842894554138,True,55.0,trunk
+290,vascular_lesions,vascular_lesions,0.9324105978012085,True,55.0,lower extremity
+291,melanocytic_Nevi,melanocytic_Nevi,0.9984533786773682,True,45.0,foot
+292,melanocytic_Nevi,melanocytic_Nevi,0.9972767233848572,True,60.0,chest
+293,melanocytic_Nevi,melanocytic_Nevi,0.9990878105163574,True,40.0,back
+294,melanocytic_Nevi,melanocytic_Nevi,0.9980841875076294,True,50.0,lower extremity
+295,melanocytic_Nevi,melanocytic_Nevi,0.7974108457565308,True,30.0,back
+296,melanocytic_Nevi,melanocytic_Nevi,0.9951208233833313,True,30.0,upper extremity
+297,melanocytic_Nevi,melanocytic_Nevi,0.9972527623176575,True,20.0,upper extremity
+298,melanocytic_Nevi,benign_keratosis-like_lesions,0.6739187240600586,False,85.0,lower extremity
+299,melanocytic_Nevi,melanocytic_Nevi,0.8403405547142029,True,65.0,upper extremity
+300,melanocytic_Nevi,melanocytic_Nevi,0.9989405274391174,True,50.0,abdomen
+301,melanoma,melanoma,0.9757118225097656,True,55.0,upper extremity
+302,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9047191739082336,True,70.0,back
+303,basal_cell_carcinoma,basal_cell_carcinoma,0.9826013445854187,True,85.0,lower extremity
+304,melanocytic_Nevi,melanocytic_Nevi,0.9911399483680725,True,40.0,upper extremity
+305,melanocytic_Nevi,melanocytic_Nevi,0.47968438267707825,True,65.0,face
+306,melanocytic_Nevi,melanocytic_Nevi,0.9882088899612427,True,85.0,upper extremity
+307,melanocytic_Nevi,melanocytic_Nevi,0.9773728251457214,True,30.0,trunk
+308,melanocytic_Nevi,melanocytic_Nevi,0.9427576065063477,True,20.0,face
+309,melanocytic_Nevi,melanocytic_Nevi,0.999107301235199,True,50.0,upper extremity
+310,melanocytic_Nevi,melanocytic_Nevi,0.997631311416626,True,15.0,back
+311,melanocytic_Nevi,melanocytic_Nevi,0.9990322589874268,True,45.0,foot
+312,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9909392595291138,True,70.0,lower extremity
+313,melanoma,melanoma,0.9888150095939636,True,40.0,lower extremity
+314,melanocytic_Nevi,melanocytic_Nevi,0.9988887906074524,True,65.0,lower extremity
+315,melanocytic_Nevi,melanocytic_Nevi,0.9981313347816467,True,40.0,unknown
+316,melanocytic_Nevi,melanocytic_Nevi,0.9979791045188904,True,10.0,foot
+317,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9827756285667419,True,60.0,back
+318,melanocytic_Nevi,melanocytic_Nevi,0.996055006980896,True,0.0,lower extremity
+319,melanocytic_Nevi,melanocytic_Nevi,0.9845565557479858,True,25.0,trunk
+320,melanocytic_Nevi,melanocytic_Nevi,0.9970507621765137,True,50.0,lower extremity
+321,melanocytic_Nevi,melanocytic_Nevi,0.9987637996673584,True,55.0,back
+322,actinic_keratoses,benign_keratosis-like_lesions,0.6055592894554138,False,75.0,lower extremity
+323,melanocytic_Nevi,melanocytic_Nevi,0.9989696741104126,True,45.0,trunk
+324,basal_cell_carcinoma,basal_cell_carcinoma,0.9810311198234558,True,30.0,back
+325,melanoma,melanoma,0.6227162480354309,True,55.0,upper extremity
+326,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.99104905128479,True,80.0,back
+327,melanocytic_Nevi,melanocytic_Nevi,0.9989951252937317,True,40.0,upper extremity
+328,melanocytic_Nevi,melanocytic_Nevi,0.9991287589073181,True,55.0,lower extremity
+329,melanocytic_Nevi,melanocytic_Nevi,0.9989739656448364,True,55.0,lower extremity
+330,melanocytic_Nevi,melanocytic_Nevi,0.9986164569854736,True,35.0,lower extremity
+331,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9910851120948792,True,75.0,trunk
+332,melanocytic_Nevi,melanocytic_Nevi,0.9977039694786072,True,,unknown
+333,melanocytic_Nevi,melanocytic_Nevi,0.9916797280311584,True,40.0,lower extremity
+334,melanocytic_Nevi,melanocytic_Nevi,0.9945160746574402,True,70.0,trunk
+335,melanocytic_Nevi,melanocytic_Nevi,0.9986861348152161,True,80.0,back
+336,melanocytic_Nevi,melanocytic_Nevi,0.9983910322189331,True,45.0,back
+337,melanoma,melanoma,0.9919135570526123,True,65.0,upper extremity
+338,melanocytic_Nevi,melanocytic_Nevi,0.9903312921524048,True,30.0,back
+339,melanoma,melanoma,0.9881507158279419,True,60.0,abdomen
+340,melanocytic_Nevi,melanocytic_Nevi,0.9990755319595337,True,50.0,trunk
+341,actinic_keratoses,benign_keratosis-like_lesions,0.733224093914032,False,80.0,face
+342,melanocytic_Nevi,melanocytic_Nevi,0.9969871640205383,True,60.0,abdomen
+343,basal_cell_carcinoma,basal_cell_carcinoma,0.6907594799995422,True,80.0,back
+344,dermatofibroma,dermatofibroma,0.8426764607429504,True,50.0,lower extremity
+345,melanoma,melanoma,0.9914603233337402,True,60.0,lower extremity
+346,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9805785417556763,True,65.0,upper extremity
+347,melanocytic_Nevi,melanocytic_Nevi,0.998369038105011,True,50.0,upper extremity
+348,melanocytic_Nevi,melanocytic_Nevi,0.9989781379699707,True,40.0,back
+349,melanocytic_Nevi,melanocytic_Nevi,0.9990785121917725,True,40.0,abdomen
+350,melanocytic_Nevi,melanocytic_Nevi,0.9990416169166565,True,35.0,back
+351,melanocytic_Nevi,melanocytic_Nevi,0.999002993106842,True,35.0,lower extremity
+352,dermatofibroma,dermatofibroma,0.9221933484077454,True,35.0,lower extremity
+353,melanocytic_Nevi,melanocytic_Nevi,0.9989707469940186,True,40.0,trunk
+354,melanocytic_Nevi,melanocytic_Nevi,0.9990732669830322,True,30.0,upper extremity
+355,melanocytic_Nevi,melanocytic_Nevi,0.9982592463493347,True,55.0,trunk
+356,melanocytic_Nevi,benign_keratosis-like_lesions,0.51128089427948,False,45.0,scalp
+357,melanocytic_Nevi,melanocytic_Nevi,0.9943179488182068,True,65.0,back
+358,vascular_lesions,vascular_lesions,0.9836392402648926,True,25.0,back
+359,melanocytic_Nevi,melanocytic_Nevi,0.9989853501319885,True,55.0,abdomen
+360,melanocytic_Nevi,melanocytic_Nevi,0.9990599751472473,True,50.0,back
+361,melanocytic_Nevi,melanocytic_Nevi,0.9989696741104126,True,45.0,upper extremity
+362,benign_keratosis-like_lesions,melanocytic_Nevi,0.5905882716178894,False,70.0,back
+363,melanocytic_Nevi,melanocytic_Nevi,0.998866081237793,True,45.0,abdomen
+364,melanocytic_Nevi,melanocytic_Nevi,0.9979873895645142,True,40.0,unknown
+365,melanocytic_Nevi,melanocytic_Nevi,0.9988518953323364,True,45.0,back
+366,melanocytic_Nevi,melanocytic_Nevi,0.9987624883651733,True,55.0,lower extremity
+367,benign_keratosis-like_lesions,melanoma,0.9449970126152039,False,85.0,abdomen
+368,melanocytic_Nevi,melanocytic_Nevi,0.9990430474281311,True,35.0,lower extremity
+369,melanocytic_Nevi,melanocytic_Nevi,0.9990536570549011,True,70.0,back
+370,melanocytic_Nevi,melanocytic_Nevi,0.9964202642440796,True,45.0,genital
+371,melanocytic_Nevi,melanocytic_Nevi,0.9879895448684692,True,45.0,foot
+372,melanocytic_Nevi,melanocytic_Nevi,0.9823282957077026,True,20.0,face
+373,melanoma,melanoma,0.9555311799049377,True,55.0,chest
+374,melanoma,melanoma,0.9902969002723694,True,70.0,back
+375,actinic_keratoses,actinic_keratoses,0.9735546112060547,True,65.0,face
+376,actinic_keratoses,actinic_keratoses,0.9093058109283447,True,65.0,back
+377,melanocytic_Nevi,melanocytic_Nevi,0.9943384528160095,True,45.0,trunk
+378,basal_cell_carcinoma,basal_cell_carcinoma,0.9664394855499268,True,60.0,lower extremity
+379,melanocytic_Nevi,melanocytic_Nevi,0.9965268969535828,True,40.0,abdomen
+380,melanocytic_Nevi,melanocytic_Nevi,0.9940330386161804,True,40.0,abdomen
+381,melanocytic_Nevi,melanocytic_Nevi,0.9723441004753113,True,65.0,back
+382,melanocytic_Nevi,melanocytic_Nevi,0.997696578502655,True,45.0,trunk
+383,actinic_keratoses,actinic_keratoses,0.962063729763031,True,65.0,face
+384,melanoma,melanoma,0.746722936630249,True,45.0,lower extremity
+385,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9916719794273376,True,60.0,face
+386,melanoma,melanoma,0.9684595465660095,True,55.0,chest
+387,melanoma,melanoma,0.9803557395935059,True,65.0,back
+388,dermatofibroma,dermatofibroma,0.8617566227912903,True,75.0,lower extremity
+389,melanocytic_Nevi,melanocytic_Nevi,0.9942873120307922,True,5.0,foot
+390,melanoma,melanoma,0.9888948202133179,True,70.0,scalp
+391,basal_cell_carcinoma,basal_cell_carcinoma,0.9434602856636047,True,75.0,scalp
+392,actinic_keratoses,actinic_keratoses,0.9257028102874756,True,65.0,neck
+393,melanoma,melanoma,0.9812666177749634,True,35.0,back
+394,melanocytic_Nevi,melanocytic_Nevi,0.9985520243644714,True,60.0,upper extremity
+395,melanocytic_Nevi,melanocytic_Nevi,0.999026894569397,True,65.0,trunk
+396,basal_cell_carcinoma,basal_cell_carcinoma,0.9816461205482483,True,80.0,face
+397,melanocytic_Nevi,melanocytic_Nevi,0.9989894032478333,True,45.0,lower extremity
+398,melanocytic_Nevi,melanocytic_Nevi,0.9989708662033081,True,45.0,upper extremity
+399,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9826490879058838,True,50.0,back
+400,melanocytic_Nevi,melanocytic_Nevi,0.9917056560516357,True,30.0,trunk
+401,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9913992881774902,True,60.0,face
+402,melanocytic_Nevi,melanocytic_Nevi,0.9990271329879761,True,45.0,lower extremity
+403,melanocytic_Nevi,melanocytic_Nevi,0.9987090826034546,True,45.0,lower extremity
+404,melanocytic_Nevi,melanocytic_Nevi,0.999041736125946,True,45.0,lower extremity
+405,melanocytic_Nevi,melanocytic_Nevi,0.9931817650794983,True,25.0,lower extremity
+406,melanocytic_Nevi,melanocytic_Nevi,0.9985994696617126,True,65.0,lower extremity
+407,melanocytic_Nevi,melanocytic_Nevi,0.9988269209861755,True,50.0,foot
+408,melanocytic_Nevi,melanocytic_Nevi,0.9923610091209412,True,30.0,lower extremity
+409,melanoma,melanoma,0.9840371608734131,True,85.0,upper extremity
+410,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.99116450548172,True,70.0,face
+411,melanocytic_Nevi,melanocytic_Nevi,0.9980706572532654,True,75.0,trunk
+412,melanoma,melanoma,0.8260563611984253,True,80.0,lower extremity
+413,melanoma,melanoma,0.5897896885871887,True,45.0,abdomen
+414,melanocytic_Nevi,melanocytic_Nevi,0.9990760087966919,True,50.0,abdomen
+415,melanocytic_Nevi,melanocytic_Nevi,0.9990829229354858,True,40.0,trunk
+416,melanocytic_Nevi,melanocytic_Nevi,0.9876623153686523,True,55.0,lower extremity
+417,melanocytic_Nevi,melanocytic_Nevi,0.9984997510910034,True,50.0,abdomen
+418,melanocytic_Nevi,melanocytic_Nevi,0.9982787370681763,True,50.0,trunk
+419,melanocytic_Nevi,benign_keratosis-like_lesions,0.956680417060852,False,60.0,lower extremity
+420,melanocytic_Nevi,melanocytic_Nevi,0.9989677667617798,True,50.0,trunk
+421,melanocytic_Nevi,melanocytic_Nevi,0.999045193195343,True,45.0,trunk
+422,melanocytic_Nevi,melanocytic_Nevi,0.9983301758766174,True,45.0,abdomen
+423,melanoma,melanoma,0.9808760285377502,True,65.0,lower extremity
+424,melanoma,melanocytic_Nevi,0.9975754618644714,False,45.0,abdomen
+425,melanocytic_Nevi,melanocytic_Nevi,0.9823582768440247,True,80.0,upper extremity
+426,melanoma,melanoma,0.9829508662223816,True,70.0,ear
+427,melanocytic_Nevi,melanocytic_Nevi,0.9990577101707458,True,45.0,hand
+428,melanocytic_Nevi,melanocytic_Nevi,0.9990817308425903,True,50.0,lower extremity
+429,basal_cell_carcinoma,basal_cell_carcinoma,0.9904324412345886,True,85.0,face
+430,melanocytic_Nevi,melanocytic_Nevi,0.9938754439353943,True,30.0,lower extremity
+431,melanocytic_Nevi,melanocytic_Nevi,0.993939995765686,True,55.0,back
+432,melanocytic_Nevi,melanocytic_Nevi,0.9983283877372742,True,55.0,foot
+433,melanocytic_Nevi,melanocytic_Nevi,0.9971147775650024,True,40.0,back
+434,melanocytic_Nevi,melanocytic_Nevi,0.9989066123962402,True,65.0,trunk
+435,melanocytic_Nevi,melanocytic_Nevi,0.9988642930984497,True,50.0,trunk
+436,melanocytic_Nevi,melanocytic_Nevi,0.9989060163497925,True,55.0,genital
+437,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9922652244567871,True,65.0,lower extremity
+438,basal_cell_carcinoma,basal_cell_carcinoma,0.986309289932251,True,60.0,abdomen
+439,melanoma,melanoma,0.9764358401298523,True,70.0,upper extremity
+440,melanocytic_Nevi,melanocytic_Nevi,0.9773122072219849,True,50.0,back
+441,vascular_lesions,vascular_lesions,0.9865380525588989,True,5.0,back
+442,melanocytic_Nevi,melanocytic_Nevi,0.9987976551055908,True,35.0,lower extremity
+443,melanocytic_Nevi,melanocytic_Nevi,0.9972410202026367,True,35.0,upper extremity
+444,melanoma,melanoma,0.9737851619720459,True,55.0,lower extremity
+445,melanocytic_Nevi,melanocytic_Nevi,0.9990272521972656,True,65.0,trunk
+446,melanocytic_Nevi,melanocytic_Nevi,0.9991046786308289,True,40.0,trunk
+447,melanocytic_Nevi,melanocytic_Nevi,0.9970511198043823,True,50.0,lower extremity
+448,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9810448288917542,True,50.0,lower extremity
+449,melanocytic_Nevi,melanocytic_Nevi,0.9989323019981384,True,45.0,trunk
+450,melanocytic_Nevi,melanocytic_Nevi,0.9957418441772461,True,35.0,upper extremity
+451,melanoma,melanoma,0.9862220883369446,True,70.0,back
+452,melanocytic_Nevi,melanocytic_Nevi,0.9834640622138977,True,80.0,abdomen
+453,actinic_keratoses,actinic_keratoses,0.8737543821334839,True,60.0,face
+454,melanocytic_Nevi,melanocytic_Nevi,0.9990004897117615,True,55.0,lower extremity
+455,melanocytic_Nevi,melanocytic_Nevi,0.9990862607955933,True,50.0,lower extremity
+456,melanocytic_Nevi,melanocytic_Nevi,0.9990083575248718,True,55.0,lower extremity
+457,basal_cell_carcinoma,basal_cell_carcinoma,0.9844955801963806,True,65.0,back
+458,melanocytic_Nevi,melanocytic_Nevi,0.9972346425056458,True,35.0,chest
+459,melanocytic_Nevi,melanocytic_Nevi,0.9990822076797485,True,35.0,back
+460,melanocytic_Nevi,melanocytic_Nevi,0.9919547438621521,True,40.0,back
+461,melanocytic_Nevi,melanocytic_Nevi,0.9986302852630615,True,45.0,back
+462,melanocytic_Nevi,melanocytic_Nevi,0.996239423751831,True,25.0,unknown
+463,melanocytic_Nevi,melanocytic_Nevi,0.9990478157997131,True,55.0,lower extremity
+464,melanocytic_Nevi,melanocytic_Nevi,0.9970999956130981,True,40.0,lower extremity
+465,melanocytic_Nevi,melanocytic_Nevi,0.9989287257194519,True,40.0,back
+466,melanocytic_Nevi,melanocytic_Nevi,0.9986971020698547,True,40.0,trunk
+467,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9896864295005798,True,80.0,back
+468,melanocytic_Nevi,melanocytic_Nevi,0.9990677237510681,True,55.0,back
+469,melanoma,melanoma,0.6368747353553772,True,80.0,lower extremity
+470,melanocytic_Nevi,melanocytic_Nevi,0.9950467348098755,True,60.0,lower extremity
+471,melanocytic_Nevi,melanocytic_Nevi,0.9988821148872375,True,40.0,lower extremity
+472,melanocytic_Nevi,melanocytic_Nevi,0.9991208910942078,True,30.0,trunk
+473,melanocytic_Nevi,melanocytic_Nevi,0.9990999698638916,True,45.0,back
+474,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9871950745582581,True,75.0,trunk
+475,melanocytic_Nevi,melanocytic_Nevi,0.9989883303642273,True,45.0,trunk
+476,basal_cell_carcinoma,basal_cell_carcinoma,0.9787006974220276,True,70.0,face
+477,melanoma,melanoma,0.9790436029434204,True,60.0,back
+478,melanocytic_Nevi,melanocytic_Nevi,0.9988706707954407,True,45.0,lower extremity
+479,melanocytic_Nevi,melanocytic_Nevi,0.9986446499824524,True,30.0,abdomen
+480,melanocytic_Nevi,melanocytic_Nevi,0.9991056323051453,True,65.0,back
+481,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9874535799026489,True,60.0,lower extremity
+482,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.973082423210144,True,80.0,back
+483,actinic_keratoses,actinic_keratoses,0.9671286344528198,True,40.0,face
+484,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9871829748153687,True,60.0,lower extremity
+485,melanocytic_Nevi,melanocytic_Nevi,0.9989131689071655,True,50.0,lower extremity
+486,melanocytic_Nevi,melanocytic_Nevi,0.9963362216949463,True,45.0,foot
+487,melanocytic_Nevi,melanocytic_Nevi,0.9990309476852417,True,45.0,trunk
+488,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9890923500061035,True,80.0,upper extremity
+489,melanocytic_Nevi,melanocytic_Nevi,0.9965092539787292,True,30.0,back
+490,melanocytic_Nevi,melanocytic_Nevi,0.9973829388618469,True,40.0,back
+491,melanoma,melanoma,0.9879990816116333,True,45.0,back
+492,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9398783445358276,True,50.0,upper extremity
+493,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9219582676887512,True,85.0,back
+494,melanocytic_Nevi,melanocytic_Nevi,0.9939000606536865,True,20.0,upper extremity
+495,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9916661381721497,True,40.0,upper extremity
+496,melanocytic_Nevi,melanocytic_Nevi,0.9979041814804077,True,40.0,upper extremity
+497,melanoma,melanoma,0.9304206371307373,True,35.0,ear
+498,melanocytic_Nevi,melanocytic_Nevi,0.9986491799354553,True,45.0,upper extremity
+499,melanocytic_Nevi,melanocytic_Nevi,0.9981751441955566,True,75.0,lower extremity
+500,basal_cell_carcinoma,benign_keratosis-like_lesions,0.7942909002304077,False,85.0,back
+501,melanocytic_Nevi,melanocytic_Nevi,0.9969663023948669,True,55.0,back
+502,basal_cell_carcinoma,basal_cell_carcinoma,0.9773958325386047,True,75.0,back
+503,melanocytic_Nevi,melanocytic_Nevi,0.9856469035148621,True,45.0,lower extremity
+504,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9923509955406189,True,75.0,back
+505,melanocytic_Nevi,melanocytic_Nevi,0.998580813407898,True,40.0,lower extremity
+506,melanocytic_Nevi,melanocytic_Nevi,0.9876348376274109,True,50.0,chest
+507,melanoma,melanoma,0.980407178401947,True,55.0,back
+508,melanocytic_Nevi,melanocytic_Nevi,0.9990781545639038,True,50.0,trunk
+509,melanocytic_Nevi,melanocytic_Nevi,0.9924647808074951,True,65.0,lower extremity
+510,basal_cell_carcinoma,basal_cell_carcinoma,0.9337917566299438,True,80.0,face
+511,melanoma,melanoma,0.9898684024810791,True,70.0,back
+512,melanoma,melanoma,0.9695013761520386,True,70.0,upper extremity
+513,melanoma,melanoma,0.8557236194610596,True,70.0,face
+514,benign_keratosis-like_lesions,melanoma,0.5985316634178162,False,65.0,back
+515,melanocytic_Nevi,melanocytic_Nevi,0.9954388737678528,True,35.0,back
+516,melanocytic_Nevi,melanocytic_Nevi,0.9991204142570496,True,20.0,foot
+517,melanocytic_Nevi,melanocytic_Nevi,0.9987607002258301,True,20.0,back
+518,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.8583964705467224,True,75.0,back
+519,basal_cell_carcinoma,basal_cell_carcinoma,0.987877607345581,True,70.0,back
+520,melanocytic_Nevi,melanoma,0.7316223978996277,False,75.0,upper extremity
+521,melanocytic_Nevi,melanocytic_Nevi,0.997248113155365,True,35.0,back
+522,dermatofibroma,dermatofibroma,0.9210827350616455,True,50.0,lower extremity
+523,melanocytic_Nevi,melanocytic_Nevi,0.9961698651313782,True,15.0,trunk
+524,melanoma,melanoma,0.9765744805335999,True,35.0,upper extremity
+525,actinic_keratoses,actinic_keratoses,0.9610151648521423,True,85.0,back
+526,melanocytic_Nevi,melanocytic_Nevi,0.9938960671424866,True,45.0,abdomen
+527,melanocytic_Nevi,melanocytic_Nevi,0.9977403879165649,True,75.0,trunk
+528,melanocytic_Nevi,melanocytic_Nevi,0.9949319958686829,True,40.0,trunk
+529,vascular_lesions,vascular_lesions,0.9779415726661682,True,70.0,back
+530,melanocytic_Nevi,melanocytic_Nevi,0.9990441203117371,True,55.0,trunk
+531,melanocytic_Nevi,melanocytic_Nevi,0.9989909529685974,True,45.0,trunk
+532,melanocytic_Nevi,melanocytic_Nevi,0.9974426031112671,True,60.0,abdomen
+533,melanocytic_Nevi,melanocytic_Nevi,0.9988627433776855,True,40.0,lower extremity
+534,melanocytic_Nevi,melanocytic_Nevi,0.9986838698387146,True,50.0,abdomen
+535,melanocytic_Nevi,melanocytic_Nevi,0.9991481304168701,True,45.0,trunk
+536,melanocytic_Nevi,melanocytic_Nevi,0.9970730543136597,True,55.0,chest
+537,melanocytic_Nevi,melanocytic_Nevi,0.998286783695221,True,35.0,abdomen
+538,actinic_keratoses,actinic_keratoses,0.9444798827171326,True,55.0,face
+539,melanocytic_Nevi,melanocytic_Nevi,0.9961680769920349,True,35.0,trunk
+540,actinic_keratoses,actinic_keratoses,0.567370593547821,True,80.0,face
+541,melanocytic_Nevi,melanocytic_Nevi,0.9991441965103149,True,40.0,abdomen
+542,melanocytic_Nevi,melanocytic_Nevi,0.9989736080169678,True,40.0,lower extremity
+543,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9933738708496094,True,70.0,trunk
+544,melanocytic_Nevi,melanocytic_Nevi,0.999100923538208,True,70.0,lower extremity
+545,melanocytic_Nevi,melanocytic_Nevi,0.9988270401954651,True,50.0,lower extremity
+546,melanoma,melanoma,0.9524878263473511,True,75.0,abdomen
+547,melanocytic_Nevi,melanocytic_Nevi,0.9988548755645752,True,35.0,lower extremity
+548,melanocytic_Nevi,melanoma,0.7351173758506775,False,5.0,upper extremity
+549,melanocytic_Nevi,melanocytic_Nevi,0.9990377426147461,True,50.0,trunk
+550,melanocytic_Nevi,melanocytic_Nevi,0.9991482496261597,True,40.0,upper extremity
+551,melanocytic_Nevi,melanocytic_Nevi,0.9986431002616882,True,35.0,back
+552,melanoma,melanoma,0.9693999886512756,True,70.0,lower extremity
+553,melanocytic_Nevi,melanocytic_Nevi,0.9981706142425537,True,30.0,trunk
+554,melanoma,benign_keratosis-like_lesions,0.9230123162269592,False,80.0,back
+555,melanocytic_Nevi,melanocytic_Nevi,0.995201587677002,True,20.0,back
+556,melanocytic_Nevi,melanocytic_Nevi,0.9990208148956299,True,55.0,foot
+557,melanocytic_Nevi,melanocytic_Nevi,0.9489121437072754,True,70.0,foot
+558,melanocytic_Nevi,melanocytic_Nevi,0.9990087151527405,True,50.0,lower extremity
+559,melanocytic_Nevi,melanocytic_Nevi,0.9988889098167419,True,30.0,foot
+560,melanocytic_Nevi,melanocytic_Nevi,0.9989284873008728,True,50.0,ear
+561,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9878361821174622,True,70.0,back
+562,vascular_lesions,vascular_lesions,0.9825953245162964,True,45.0,abdomen
+563,melanocytic_Nevi,melanocytic_Nevi,0.9991316199302673,True,30.0,upper extremity
+564,actinic_keratoses,actinic_keratoses,0.966547429561615,True,60.0,face
+565,melanocytic_Nevi,melanocytic_Nevi,0.9959396123886108,True,45.0,lower extremity
+566,melanocytic_Nevi,melanocytic_Nevi,0.9988515377044678,True,40.0,abdomen
+567,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9618197679519653,True,75.0,face
+568,melanocytic_Nevi,melanocytic_Nevi,0.9989546537399292,True,40.0,trunk
+569,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9756970405578613,True,70.0,back
+570,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9850466251373291,True,75.0,abdomen
+571,melanocytic_Nevi,melanocytic_Nevi,0.9970721006393433,True,40.0,lower extremity
+572,melanocytic_Nevi,melanocytic_Nevi,0.9990572333335876,True,45.0,abdomen
+573,melanocytic_Nevi,melanocytic_Nevi,0.9930813908576965,True,30.0,abdomen
+574,melanocytic_Nevi,melanocytic_Nevi,0.9489608407020569,True,70.0,chest
+575,melanocytic_Nevi,melanocytic_Nevi,0.9990214109420776,True,55.0,lower extremity
+576,melanocytic_Nevi,melanocytic_Nevi,0.9988051652908325,True,50.0,lower extremity
+577,melanoma,melanocytic_Nevi,0.9900174736976624,False,45.0,lower extremity
+578,melanoma,melanoma,0.9852316379547119,True,75.0,back
+579,melanocytic_Nevi,melanocytic_Nevi,0.9950010180473328,True,60.0,neck
+580,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9824658632278442,True,70.0,trunk
+581,melanocytic_Nevi,melanocytic_Nevi,0.99339759349823,True,70.0,upper extremity
+582,basal_cell_carcinoma,basal_cell_carcinoma,0.9703436493873596,True,60.0,back
+583,melanoma,melanoma,0.9831026196479797,True,80.0,chest
+584,melanoma,melanoma,0.9879371523857117,True,70.0,chest
+585,melanocytic_Nevi,melanocytic_Nevi,0.9986953139305115,True,35.0,abdomen
+586,melanocytic_Nevi,melanocytic_Nevi,0.9987674951553345,True,80.0,trunk
+587,melanocytic_Nevi,melanocytic_Nevi,0.9892829656600952,True,25.0,face
+588,melanocytic_Nevi,melanocytic_Nevi,0.9989175796508789,True,35.0,lower extremity
+589,melanocytic_Nevi,melanocytic_Nevi,0.9938016533851624,True,25.0,back
+590,melanocytic_Nevi,melanocytic_Nevi,0.9986590147018433,True,45.0,back
+591,melanocytic_Nevi,melanocytic_Nevi,0.9938254356384277,True,75.0,back
+592,melanocytic_Nevi,melanocytic_Nevi,0.9988344311714172,True,55.0,trunk
+593,melanocytic_Nevi,melanocytic_Nevi,0.9107776284217834,True,20.0,back
+594,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9822924733161926,True,85.0,back
+595,melanocytic_Nevi,melanocytic_Nevi,0.9674490094184875,True,50.0,ear
+596,melanocytic_Nevi,melanocytic_Nevi,0.9989388585090637,True,40.0,lower extremity
+597,basal_cell_carcinoma,basal_cell_carcinoma,0.9418053030967712,True,85.0,face
+598,melanocytic_Nevi,melanocytic_Nevi,0.9974111914634705,True,30.0,foot
+599,melanoma,melanoma,0.9854539632797241,True,75.0,lower extremity
+600,melanocytic_Nevi,melanocytic_Nevi,0.9991636276245117,True,45.0,trunk
+601,melanocytic_Nevi,melanocytic_Nevi,0.9989879727363586,True,50.0,trunk
+602,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9764378666877747,True,65.0,face
+603,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9875620603561401,True,65.0,face
+604,melanoma,melanoma,0.9915281534194946,True,55.0,upper extremity
+605,vascular_lesions,vascular_lesions,0.980903148651123,True,65.0,trunk
+606,melanocytic_Nevi,melanocytic_Nevi,0.9991340041160583,True,45.0,lower extremity
+607,melanocytic_Nevi,melanocytic_Nevi,0.9964470267295837,True,45.0,upper extremity
+608,melanoma,melanoma,0.9794328212738037,True,80.0,scalp
+609,melanocytic_Nevi,melanocytic_Nevi,0.9939192533493042,True,30.0,back
+610,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9838735461235046,True,60.0,face
+611,basal_cell_carcinoma,basal_cell_carcinoma,0.9770520925521851,True,65.0,lower extremity
+612,melanocytic_Nevi,melanocytic_Nevi,0.9990708827972412,True,45.0,trunk
+613,melanocytic_Nevi,melanocytic_Nevi,0.993378758430481,True,75.0,back
+614,melanocytic_Nevi,melanocytic_Nevi,0.994716227054596,True,70.0,abdomen
+615,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9887346625328064,True,65.0,neck
+616,actinic_keratoses,actinic_keratoses,0.9403138756752014,True,75.0,lower extremity
+617,melanocytic_Nevi,melanocytic_Nevi,0.998729407787323,True,50.0,back
+618,melanoma,melanoma,0.9905189871788025,True,55.0,chest
+619,melanocytic_Nevi,melanocytic_Nevi,0.9989336133003235,True,45.0,trunk
+620,melanocytic_Nevi,melanocytic_Nevi,0.9976152181625366,True,50.0,chest
+621,melanocytic_Nevi,melanocytic_Nevi,0.9983618855476379,True,70.0,chest
+622,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9828800559043884,True,40.0,unknown
+623,melanocytic_Nevi,melanocytic_Nevi,0.44269299507141113,True,55.0,upper extremity
+624,melanocytic_Nevi,melanocytic_Nevi,0.9991136193275452,True,45.0,back
+625,melanoma,melanoma,0.9797939658164978,True,55.0,lower extremity
+626,melanocytic_Nevi,melanocytic_Nevi,0.9989815354347229,True,50.0,lower extremity
+627,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9892339706420898,True,75.0,trunk
+628,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9832739233970642,True,85.0,face
+629,melanocytic_Nevi,melanocytic_Nevi,0.9972522854804993,True,30.0,back
+630,melanocytic_Nevi,melanocytic_Nevi,0.9983198046684265,True,40.0,abdomen
+631,melanocytic_Nevi,melanocytic_Nevi,0.9990741014480591,True,40.0,back
+632,melanoma,melanoma,0.9893580079078674,True,45.0,lower extremity
+633,melanocytic_Nevi,melanocytic_Nevi,0.9987888932228088,True,55.0,back
+634,melanocytic_Nevi,melanocytic_Nevi,0.9873952865600586,True,65.0,back
+635,melanocytic_Nevi,basal_cell_carcinoma,0.9017987847328186,False,35.0,trunk
+636,melanocytic_Nevi,melanocytic_Nevi,0.9975610971450806,True,30.0,genital
+637,melanocytic_Nevi,melanocytic_Nevi,0.9984188079833984,True,35.0,abdomen
+638,melanocytic_Nevi,melanocytic_Nevi,0.9252849817276001,True,45.0,foot
+639,melanocytic_Nevi,melanocytic_Nevi,0.9990610480308533,True,60.0,abdomen
+640,basal_cell_carcinoma,basal_cell_carcinoma,0.9860438108444214,True,85.0,face
+641,basal_cell_carcinoma,basal_cell_carcinoma,0.9875396490097046,True,85.0,neck
+642,melanocytic_Nevi,melanocytic_Nevi,0.9943493008613586,True,20.0,back
+643,melanocytic_Nevi,melanocytic_Nevi,0.9953024387359619,True,25.0,chest
+644,melanoma,melanoma,0.987177848815918,True,65.0,ear
+645,melanocytic_Nevi,melanocytic_Nevi,0.9971221089363098,True,50.0,back
+646,melanocytic_Nevi,melanocytic_Nevi,0.9976643323898315,True,,unknown
+647,melanoma,melanoma,0.9849292635917664,True,45.0,upper extremity
+648,melanocytic_Nevi,melanocytic_Nevi,0.9824073314666748,True,5.0,foot
+649,melanocytic_Nevi,melanocytic_Nevi,0.9584482908248901,True,60.0,back
+650,melanocytic_Nevi,melanocytic_Nevi,0.9988880753517151,True,60.0,abdomen
+651,basal_cell_carcinoma,basal_cell_carcinoma,0.9892093539237976,True,85.0,back
+652,melanocytic_Nevi,melanocytic_Nevi,0.9989001750946045,True,45.0,trunk
+653,melanocytic_Nevi,melanocytic_Nevi,0.994799017906189,True,50.0,chest
+654,melanocytic_Nevi,melanocytic_Nevi,0.9952762126922607,True,30.0,back
+655,actinic_keratoses,actinic_keratoses,0.8888276815414429,True,75.0,lower extremity
+656,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9888355135917664,True,60.0,lower extremity
+657,melanocytic_Nevi,melanocytic_Nevi,0.9990554451942444,True,45.0,lower extremity
+658,melanocytic_Nevi,melanocytic_Nevi,0.9989597797393799,True,45.0,upper extremity
+659,actinic_keratoses,actinic_keratoses,0.9675614833831787,True,85.0,back
+660,melanocytic_Nevi,melanocytic_Nevi,0.9991546869277954,True,40.0,back
+661,melanocytic_Nevi,melanocytic_Nevi,0.9990610480308533,True,50.0,abdomen
+662,melanoma,melanoma,0.9822689294815063,True,65.0,trunk
+663,melanoma,melanoma,0.9883559942245483,True,55.0,neck
+664,melanocytic_Nevi,melanocytic_Nevi,0.9982795715332031,True,40.0,foot
+665,basal_cell_carcinoma,basal_cell_carcinoma,0.9897801876068115,True,65.0,back
+666,melanocytic_Nevi,melanocytic_Nevi,0.9991359114646912,True,45.0,back
+667,dermatofibroma,dermatofibroma,0.9427145719528198,True,45.0,lower extremity
+668,melanocytic_Nevi,melanocytic_Nevi,0.9916749596595764,True,70.0,upper extremity
+669,melanocytic_Nevi,melanocytic_Nevi,0.992871105670929,True,35.0,upper extremity
+670,melanocytic_Nevi,melanocytic_Nevi,0.993728756904602,True,40.0,back
+671,basal_cell_carcinoma,basal_cell_carcinoma,0.9701878428459167,True,65.0,abdomen
+672,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9920475482940674,True,70.0,scalp
+673,melanocytic_Nevi,melanocytic_Nevi,0.999079704284668,True,50.0,lower extremity
+674,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9930790066719055,True,75.0,abdomen
+675,melanocytic_Nevi,melanocytic_Nevi,0.9937605261802673,True,45.0,back
+676,melanocytic_Nevi,melanocytic_Nevi,0.9978455305099487,True,30.0,trunk
+677,basal_cell_carcinoma,basal_cell_carcinoma,0.9782618284225464,True,45.0,lower extremity
+678,melanocytic_Nevi,melanocytic_Nevi,0.984271228313446,True,60.0,trunk
+679,melanoma,melanoma,0.9828059077262878,True,65.0,lower extremity
+680,melanocytic_Nevi,melanocytic_Nevi,0.9989571571350098,True,40.0,upper extremity
+681,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9862238168716431,True,85.0,face
+682,melanocytic_Nevi,melanocytic_Nevi,0.9990109205245972,True,45.0,abdomen
+683,melanocytic_Nevi,melanocytic_Nevi,0.9983708262443542,True,45.0,lower extremity
+684,melanocytic_Nevi,melanocytic_Nevi,0.993293285369873,True,30.0,face
+685,melanocytic_Nevi,melanocytic_Nevi,0.9986745119094849,True,55.0,abdomen
+686,vascular_lesions,vascular_lesions,0.952595055103302,True,55.0,face
+687,melanoma,melanoma,0.9631585478782654,True,50.0,trunk
+688,actinic_keratoses,actinic_keratoses,0.9015018343925476,True,70.0,hand
+689,melanocytic_Nevi,melanocytic_Nevi,0.9990503191947937,True,55.0,trunk
+690,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.990533709526062,True,45.0,face
+691,melanoma,melanoma,0.9741522073745728,True,80.0,upper extremity
+692,melanocytic_Nevi,melanocytic_Nevi,0.9990899562835693,True,50.0,foot
+693,melanocytic_Nevi,melanocytic_Nevi,0.9977325201034546,True,60.0,upper extremity
+694,melanoma,melanoma,0.9813004732131958,True,50.0,abdomen
+695,melanocytic_Nevi,melanocytic_Nevi,0.9990540146827698,True,55.0,lower extremity
+696,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9153760671615601,True,60.0,back
+697,melanoma,melanoma,0.9898908138275146,True,65.0,back
+698,melanoma,melanoma,0.9882947206497192,True,65.0,back
+699,melanocytic_Nevi,melanocytic_Nevi,0.9980929493904114,True,,unknown
+700,melanocytic_Nevi,melanocytic_Nevi,0.9990206956863403,True,55.0,lower extremity
+701,melanocytic_Nevi,melanocytic_Nevi,0.9988871216773987,True,35.0,trunk
+702,melanocytic_Nevi,melanocytic_Nevi,0.9946359992027283,True,30.0,back
+703,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.7411192059516907,True,40.0,chest
+704,melanocytic_Nevi,melanocytic_Nevi,0.9991183876991272,True,65.0,back
+705,melanocytic_Nevi,melanocytic_Nevi,0.9979286193847656,True,5.0,back
+706,melanocytic_Nevi,melanocytic_Nevi,0.9937883019447327,True,0.0,chest
+707,basal_cell_carcinoma,basal_cell_carcinoma,0.9678225517272949,True,60.0,back
+708,vascular_lesions,vascular_lesions,0.9328962564468384,True,30.0,lower extremity
+709,melanocytic_Nevi,melanocytic_Nevi,0.9856799840927124,True,60.0,abdomen
+710,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9616633653640747,True,80.0,face
+711,basal_cell_carcinoma,basal_cell_carcinoma,0.8685499429702759,True,40.0,back
+712,melanocytic_Nevi,melanocytic_Nevi,0.9990577101707458,True,50.0,trunk
+713,melanocytic_Nevi,melanocytic_Nevi,0.9962213039398193,True,65.0,upper extremity
+714,actinic_keratoses,actinic_keratoses,0.9675763249397278,True,65.0,face
+715,melanocytic_Nevi,melanocytic_Nevi,0.997998058795929,True,50.0,trunk
+716,melanocytic_Nevi,melanocytic_Nevi,0.9985237717628479,True,35.0,trunk
+717,melanoma,melanoma,0.9857015609741211,True,55.0,abdomen
+718,melanocytic_Nevi,melanocytic_Nevi,0.9987310767173767,True,70.0,trunk
+719,melanocytic_Nevi,melanocytic_Nevi,0.9977929592132568,True,70.0,lower extremity
+720,melanocytic_Nevi,melanocytic_Nevi,0.9979097247123718,True,75.0,lower extremity
+721,melanocytic_Nevi,melanocytic_Nevi,0.9990296363830566,True,60.0,lower extremity
+722,melanocytic_Nevi,melanocytic_Nevi,0.9859441518783569,True,75.0,lower extremity
+723,benign_keratosis-like_lesions,melanoma,0.9702356457710266,False,55.0,lower extremity
+724,melanocytic_Nevi,melanocytic_Nevi,0.9972044825553894,True,50.0,abdomen
+725,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9916195869445801,True,65.0,trunk
+726,melanocytic_Nevi,melanocytic_Nevi,0.9976957440376282,True,45.0,upper extremity
+727,melanocytic_Nevi,melanocytic_Nevi,0.9989855885505676,True,35.0,back
+728,melanocytic_Nevi,melanocytic_Nevi,0.9990228414535522,True,45.0,trunk
+729,melanocytic_Nevi,melanocytic_Nevi,0.9789406657218933,True,10.0,upper extremity
+730,melanocytic_Nevi,melanocytic_Nevi,0.9989092350006104,True,50.0,back
+731,melanocytic_Nevi,melanocytic_Nevi,0.9754402041435242,True,70.0,back
+732,vascular_lesions,vascular_lesions,0.9846203327178955,True,35.0,trunk
+733,actinic_keratoses,actinic_keratoses,0.9610880613327026,True,45.0,face
+734,melanocytic_Nevi,melanocytic_Nevi,0.942514181137085,True,65.0,upper extremity
+735,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9899547100067139,True,50.0,face
+736,melanocytic_Nevi,melanocytic_Nevi,0.9980954527854919,True,30.0,upper extremity
+737,melanocytic_Nevi,melanocytic_Nevi,0.9987731575965881,True,45.0,lower extremity
+738,melanocytic_Nevi,melanocytic_Nevi,0.9775843024253845,True,55.0,back
+739,melanocytic_Nevi,melanocytic_Nevi,0.9988812804222107,True,45.0,lower extremity
+740,melanocytic_Nevi,melanocytic_Nevi,0.9931580424308777,True,75.0,upper extremity
+741,melanocytic_Nevi,melanocytic_Nevi,0.9988170862197876,True,80.0,abdomen
+742,melanocytic_Nevi,melanocytic_Nevi,0.9984272718429565,True,45.0,abdomen
+743,melanoma,melanoma,0.9700050950050354,True,70.0,face
+744,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.991820216178894,True,80.0,face
+745,melanocytic_Nevi,melanocytic_Nevi,0.998904824256897,True,70.0,trunk
+746,basal_cell_carcinoma,basal_cell_carcinoma,0.9801092147827148,True,70.0,back
+747,melanocytic_Nevi,melanocytic_Nevi,0.9967779517173767,True,75.0,back
+748,melanocytic_Nevi,melanocytic_Nevi,0.9913893342018127,True,40.0,back
+749,melanocytic_Nevi,melanocytic_Nevi,0.9842408299446106,True,50.0,back
+750,melanocytic_Nevi,melanocytic_Nevi,0.9991531372070312,True,40.0,back
+751,melanocytic_Nevi,melanocytic_Nevi,0.9920684099197388,True,60.0,back
+752,melanocytic_Nevi,melanocytic_Nevi,0.9990563988685608,True,55.0,trunk
+753,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.986506462097168,True,45.0,upper extremity
+754,melanocytic_Nevi,melanocytic_Nevi,0.9989079236984253,True,65.0,back
+755,melanocytic_Nevi,melanocytic_Nevi,0.9987310767173767,True,45.0,upper extremity
+756,melanocytic_Nevi,melanocytic_Nevi,0.9912426471710205,True,55.0,abdomen
+757,melanocytic_Nevi,melanocytic_Nevi,0.9860090613365173,True,35.0,back
+758,melanocytic_Nevi,melanocytic_Nevi,0.9988003969192505,True,40.0,trunk
+759,melanocytic_Nevi,melanocytic_Nevi,0.9990103244781494,True,55.0,lower extremity
+760,melanocytic_Nevi,melanocytic_Nevi,0.9364491105079651,True,55.0,back
+761,melanoma,melanoma,0.9836904406547546,True,65.0,face
+762,melanocytic_Nevi,melanocytic_Nevi,0.9971135854721069,True,40.0,lower extremity
+763,melanoma,melanoma,0.9851998090744019,True,65.0,back
+764,melanocytic_Nevi,melanocytic_Nevi,0.997076153755188,True,30.0,back
+765,melanocytic_Nevi,melanocytic_Nevi,0.9982201457023621,True,35.0,back
+766,melanocytic_Nevi,melanocytic_Nevi,0.9990767240524292,True,50.0,lower extremity
+767,melanoma,melanoma,0.9398027658462524,True,60.0,chest
+768,basal_cell_carcinoma,basal_cell_carcinoma,0.984916627407074,True,45.0,upper extremity
+769,melanocytic_Nevi,melanocytic_Nevi,0.9741542935371399,True,15.0,abdomen
+770,melanocytic_Nevi,melanocytic_Nevi,0.9960638880729675,True,0.0,lower extremity
+771,melanocytic_Nevi,melanocytic_Nevi,0.9990283250808716,True,60.0,lower extremity
+772,melanocytic_Nevi,melanocytic_Nevi,0.9989107847213745,True,35.0,lower extremity
+773,melanocytic_Nevi,melanocytic_Nevi,0.9989237189292908,True,45.0,lower extremity
+774,melanoma,melanoma,0.9842564463615417,True,50.0,foot
+775,actinic_keratoses,actinic_keratoses,0.9366328120231628,True,80.0,scalp
+776,melanocytic_Nevi,melanocytic_Nevi,0.9987695813179016,True,40.0,abdomen
+777,melanocytic_Nevi,melanocytic_Nevi,0.9988269209861755,True,40.0,foot
+778,melanoma,melanoma,0.9912563562393188,True,50.0,upper extremity
+779,melanocytic_Nevi,melanocytic_Nevi,0.999066174030304,True,35.0,trunk
+780,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9439717531204224,True,40.0,unknown
+781,vascular_lesions,vascular_lesions,0.9785413146018982,True,35.0,lower extremity
+782,melanocytic_Nevi,melanocytic_Nevi,0.982623279094696,True,40.0,lower extremity
+783,melanocytic_Nevi,melanocytic_Nevi,0.9985308647155762,True,40.0,abdomen
+784,benign_keratosis-like_lesions,melanocytic_Nevi,0.9554500579833984,False,60.0,lower extremity
+785,vascular_lesions,vascular_lesions,0.9798358678817749,True,45.0,abdomen
+786,dermatofibroma,dermatofibroma,0.9284160733222961,True,55.0,lower extremity
+787,melanocytic_Nevi,melanocytic_Nevi,0.9930447936058044,True,,unknown
+788,benign_keratosis-like_lesions,melanoma,0.7015836834907532,False,65.0,lower extremity
+789,melanocytic_Nevi,melanocytic_Nevi,0.9855148792266846,True,50.0,ear
+790,melanocytic_Nevi,melanocytic_Nevi,0.9990480542182922,True,55.0,lower extremity
+791,melanoma,melanoma,0.4781728982925415,True,55.0,back
+792,melanocytic_Nevi,melanocytic_Nevi,0.8885478377342224,True,55.0,back
+793,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9490988254547119,True,70.0,trunk
+794,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9885061979293823,True,60.0,lower extremity
+795,melanocytic_Nevi,melanocytic_Nevi,0.9991488456726074,True,50.0,trunk
+796,melanocytic_Nevi,melanocytic_Nevi,0.9991108775138855,True,25.0,trunk
+797,melanocytic_Nevi,melanocytic_Nevi,0.9989508390426636,True,30.0,trunk
+798,melanocytic_Nevi,melanocytic_Nevi,0.9986873269081116,True,45.0,trunk
+799,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9875943660736084,True,40.0,abdomen
+800,melanoma,melanoma,0.986636221408844,True,70.0,back
+801,melanocytic_Nevi,melanocytic_Nevi,0.9967851638793945,True,60.0,back
+802,melanocytic_Nevi,melanocytic_Nevi,0.9989228844642639,True,65.0,trunk
+803,melanocytic_Nevi,melanocytic_Nevi,0.998985230922699,True,40.0,back
+804,basal_cell_carcinoma,basal_cell_carcinoma,0.9833092093467712,True,55.0,upper extremity
+805,melanocytic_Nevi,melanocytic_Nevi,0.9990025162696838,True,60.0,lower extremity
+806,melanocytic_Nevi,melanocytic_Nevi,0.9904690384864807,True,45.0,abdomen
+807,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9910208582878113,True,70.0,trunk
+808,vascular_lesions,vascular_lesions,0.9769198894500732,True,70.0,back
+809,melanoma,melanoma,0.9909883141517639,True,50.0,back
+810,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9830385446548462,True,70.0,face
+811,melanocytic_Nevi,melanocytic_Nevi,0.9985148310661316,True,45.0,foot
+812,melanocytic_Nevi,melanocytic_Nevi,0.9990506768226624,True,50.0,trunk
+813,melanocytic_Nevi,melanocytic_Nevi,0.9955844283103943,True,40.0,back
+814,melanocytic_Nevi,melanocytic_Nevi,0.9989989399909973,True,45.0,trunk
+815,melanocytic_Nevi,melanocytic_Nevi,0.9972074627876282,True,30.0,lower extremity
+816,melanocytic_Nevi,melanocytic_Nevi,0.9987130165100098,True,45.0,lower extremity
+817,melanoma,melanoma,0.9191445112228394,True,30.0,back
+818,melanocytic_Nevi,melanocytic_Nevi,0.999085545539856,True,50.0,lower extremity
+819,melanocytic_Nevi,melanocytic_Nevi,0.9990066885948181,True,40.0,lower extremity
+820,melanocytic_Nevi,melanocytic_Nevi,0.9990864992141724,True,35.0,trunk
+821,benign_keratosis-like_lesions,basal_cell_carcinoma,0.8135359883308411,False,55.0,lower extremity
+822,melanoma,melanoma,0.9629589319229126,True,25.0,back
+823,melanoma,melanoma,0.9868147373199463,True,35.0,back
+824,actinic_keratoses,actinic_keratoses,0.8931816220283508,True,65.0,ear
+825,melanocytic_Nevi,melanocytic_Nevi,0.9990891218185425,True,45.0,trunk
+826,melanocytic_Nevi,melanocytic_Nevi,0.995185911655426,True,45.0,trunk
+827,melanocytic_Nevi,melanocytic_Nevi,0.9991174340248108,True,50.0,back
+828,melanocytic_Nevi,melanocytic_Nevi,0.9979142546653748,True,5.0,scalp
+829,melanocytic_Nevi,melanocytic_Nevi,0.9962767958641052,True,55.0,lower extremity
+830,melanocytic_Nevi,melanocytic_Nevi,0.9990614056587219,True,45.0,abdomen
+831,melanocytic_Nevi,melanocytic_Nevi,0.9989578723907471,True,60.0,abdomen
+832,melanocytic_Nevi,melanocytic_Nevi,0.999028205871582,True,50.0,lower extremity
+833,melanocytic_Nevi,melanocytic_Nevi,0.9985297918319702,True,50.0,abdomen
+834,melanocytic_Nevi,melanocytic_Nevi,0.9987610578536987,True,45.0,abdomen
+835,melanoma,melanoma,0.9865415096282959,True,80.0,lower extremity
+836,melanocytic_Nevi,melanocytic_Nevi,0.9953677654266357,True,30.0,lower extremity
+837,melanocytic_Nevi,melanocytic_Nevi,0.964277982711792,True,60.0,abdomen
+838,dermatofibroma,dermatofibroma,0.9302301406860352,True,75.0,lower extremity
+839,melanocytic_Nevi,melanocytic_Nevi,0.9990817308425903,True,45.0,lower extremity
+840,melanocytic_Nevi,melanocytic_Nevi,0.9991257786750793,True,45.0,abdomen
+841,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9914745092391968,True,70.0,back
+842,melanocytic_Nevi,melanocytic_Nevi,0.9956679344177246,True,20.0,back
+843,melanocytic_Nevi,melanocytic_Nevi,0.9985888600349426,True,40.0,unknown
+844,melanocytic_Nevi,melanocytic_Nevi,0.9984739422798157,True,45.0,foot
+845,melanocytic_Nevi,melanocytic_Nevi,0.9989448189735413,True,45.0,trunk
+846,melanocytic_Nevi,melanocytic_Nevi,0.9989874958992004,True,45.0,abdomen
+847,melanocytic_Nevi,melanocytic_Nevi,0.9984342455863953,True,50.0,abdomen
+848,basal_cell_carcinoma,basal_cell_carcinoma,0.9879297018051147,True,40.0,back
+849,melanocytic_Nevi,melanocytic_Nevi,0.9989266991615295,True,40.0,abdomen
+850,melanocytic_Nevi,melanocytic_Nevi,0.9913676381111145,True,35.0,foot
+851,melanocytic_Nevi,melanocytic_Nevi,0.9879442453384399,True,40.0,upper extremity
+852,melanocytic_Nevi,melanocytic_Nevi,0.9972304701805115,True,45.0,lower extremity
+853,melanocytic_Nevi,melanocytic_Nevi,0.9986597299575806,True,35.0,upper extremity
+854,basal_cell_carcinoma,basal_cell_carcinoma,0.9836438298225403,True,60.0,upper extremity
+855,melanocytic_Nevi,melanocytic_Nevi,0.9986740350723267,True,50.0,lower extremity
+856,melanocytic_Nevi,melanocytic_Nevi,0.9907402992248535,True,0.0,upper extremity
+857,basal_cell_carcinoma,basal_cell_carcinoma,0.9752519130706787,True,50.0,back
+858,melanocytic_Nevi,melanocytic_Nevi,0.976870059967041,True,25.0,back
+859,melanoma,melanoma,0.8799483180046082,True,30.0,lower extremity
+860,melanoma,melanoma,0.9892374277114868,True,85.0,lower extremity
+861,melanoma,melanoma,0.9895483255386353,True,65.0,trunk
+862,melanocytic_Nevi,melanocytic_Nevi,0.9966176152229309,True,45.0,lower extremity
+863,melanoma,melanoma,0.9747146964073181,True,80.0,lower extremity
+864,melanocytic_Nevi,melanocytic_Nevi,0.9989657402038574,True,40.0,abdomen
+865,melanoma,melanoma,0.9363904595375061,True,25.0,lower extremity
+866,melanocytic_Nevi,melanocytic_Nevi,0.9990187883377075,True,65.0,trunk
+867,melanocytic_Nevi,melanocytic_Nevi,0.9931526184082031,True,30.0,back
+868,melanoma,melanoma,0.9825125932693481,True,65.0,back
+869,melanoma,melanoma,0.9914167523384094,True,50.0,upper extremity
+870,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9624009132385254,True,65.0,neck
+871,melanocytic_Nevi,melanocytic_Nevi,0.9990476965904236,True,45.0,lower extremity
+872,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9659879803657532,True,75.0,face
+873,melanoma,melanoma,0.9905070066452026,True,80.0,face
+874,melanocytic_Nevi,melanocytic_Nevi,0.9991421699523926,True,50.0,genital
+875,melanocytic_Nevi,melanocytic_Nevi,0.9990493655204773,True,45.0,abdomen
+876,melanocytic_Nevi,melanocytic_Nevi,0.9229381680488586,True,75.0,back
+877,melanoma,melanoma,0.9861680865287781,True,75.0,upper extremity
+878,melanocytic_Nevi,melanocytic_Nevi,0.9958699345588684,True,40.0,trunk
+879,basal_cell_carcinoma,basal_cell_carcinoma,0.9819524884223938,True,60.0,neck
+880,melanocytic_Nevi,melanocytic_Nevi,0.99910968542099,True,40.0,back
+881,melanocytic_Nevi,melanocytic_Nevi,0.9932408332824707,True,20.0,back
+882,melanocytic_Nevi,melanocytic_Nevi,0.9830542206764221,True,40.0,lower extremity
+883,melanocytic_Nevi,melanocytic_Nevi,0.9991047978401184,True,60.0,genital
+884,melanoma,melanoma,0.6727690696716309,True,50.0,back
+885,dermatofibroma,dermatofibroma,0.7853562235832214,True,80.0,upper extremity
+886,melanocytic_Nevi,melanocytic_Nevi,0.9985367059707642,True,55.0,lower extremity
+887,melanoma,melanoma,0.9885402321815491,True,25.0,face
+888,melanocytic_Nevi,melanocytic_Nevi,0.9989715814590454,True,35.0,abdomen
+889,melanocytic_Nevi,melanocytic_Nevi,0.998935878276825,True,55.0,lower extremity
+890,melanocytic_Nevi,melanocytic_Nevi,0.9901989698410034,True,45.0,abdomen
+891,melanocytic_Nevi,melanocytic_Nevi,0.9965987801551819,True,40.0,abdomen
+892,melanocytic_Nevi,melanocytic_Nevi,0.9970250725746155,True,60.0,lower extremity
+893,melanocytic_Nevi,melanocytic_Nevi,0.9987200498580933,True,60.0,unknown
+894,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9889429807662964,True,65.0,upper extremity
+895,melanocytic_Nevi,melanocytic_Nevi,0.9973689317703247,True,35.0,abdomen
+896,melanocytic_Nevi,melanocytic_Nevi,0.998537540435791,True,45.0,foot
+897,melanocytic_Nevi,melanocytic_Nevi,0.9980283379554749,True,35.0,abdomen
+898,melanocytic_Nevi,melanocytic_Nevi,0.9988188147544861,True,55.0,lower extremity
+899,melanocytic_Nevi,melanocytic_Nevi,0.9990723133087158,True,45.0,trunk
+900,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9661096334457397,True,85.0,face
+901,melanocytic_Nevi,melanocytic_Nevi,0.9990072846412659,True,40.0,lower extremity
+902,melanoma,melanoma,0.9781364798545837,True,70.0,back
+903,melanoma,melanoma,0.9849284291267395,True,80.0,face
+904,melanoma,melanoma,0.9725984334945679,True,65.0,upper extremity
+905,melanocytic_Nevi,melanocytic_Nevi,0.9890122413635254,True,55.0,abdomen
+906,melanocytic_Nevi,melanocytic_Nevi,0.9991812109947205,True,45.0,back
+907,melanoma,melanoma,0.9887403845787048,True,70.0,upper extremity
+908,melanocytic_Nevi,melanocytic_Nevi,0.9988879561424255,True,50.0,abdomen
+909,melanocytic_Nevi,melanocytic_Nevi,0.9979938268661499,True,50.0,trunk
+910,melanocytic_Nevi,melanocytic_Nevi,0.9991408586502075,True,65.0,upper extremity
+911,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9204518795013428,True,85.0,chest
+912,melanocytic_Nevi,melanocytic_Nevi,0.998816967010498,True,40.0,lower extremity
+913,melanocytic_Nevi,melanocytic_Nevi,0.9990336894989014,True,40.0,trunk
+914,basal_cell_carcinoma,basal_cell_carcinoma,0.9207202792167664,True,75.0,face
+915,melanocytic_Nevi,melanocytic_Nevi,0.9986695051193237,True,55.0,back
+916,melanocytic_Nevi,melanocytic_Nevi,0.9990270137786865,True,45.0,lower extremity
+917,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9895952343940735,True,60.0,face
+918,melanocytic_Nevi,melanocytic_Nevi,0.996333122253418,True,35.0,trunk
+919,melanocytic_Nevi,melanocytic_Nevi,0.9990777969360352,True,35.0,lower extremity
+920,melanocytic_Nevi,melanocytic_Nevi,0.998785674571991,True,35.0,abdomen
+921,melanocytic_Nevi,melanocytic_Nevi,0.9989708662033081,True,50.0,lower extremity
+922,basal_cell_carcinoma,basal_cell_carcinoma,0.9848757386207581,True,50.0,back
+923,melanocytic_Nevi,melanocytic_Nevi,0.9967445135116577,True,60.0,back
+924,melanocytic_Nevi,benign_keratosis-like_lesions,0.7415727376937866,False,55.0,upper extremity
+925,melanocytic_Nevi,melanocytic_Nevi,0.9989094734191895,True,40.0,foot
+926,melanocytic_Nevi,melanocytic_Nevi,0.999021053314209,True,55.0,lower extremity
+927,melanoma,melanoma,0.9922653436660767,True,65.0,upper extremity
+928,melanocytic_Nevi,melanocytic_Nevi,0.9989392161369324,True,65.0,lower extremity
+929,vascular_lesions,vascular_lesions,0.9804553389549255,True,80.0,lower extremity
+930,melanocytic_Nevi,melanocytic_Nevi,0.9832882285118103,True,45.0,trunk
+931,melanocytic_Nevi,melanocytic_Nevi,0.9990621209144592,True,60.0,trunk
+932,melanocytic_Nevi,melanocytic_Nevi,0.9970881342887878,True,40.0,abdomen
+933,melanocytic_Nevi,melanocytic_Nevi,0.9968442916870117,True,50.0,upper extremity
+934,melanocytic_Nevi,melanocytic_Nevi,0.999065101146698,True,55.0,back
+935,melanocytic_Nevi,melanocytic_Nevi,0.9989340901374817,True,45.0,abdomen
+936,melanocytic_Nevi,melanocytic_Nevi,0.9906486868858337,True,40.0,back
+937,melanocytic_Nevi,melanocytic_Nevi,0.9991050362586975,True,50.0,abdomen
+938,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9921092391014099,True,80.0,back
+939,basal_cell_carcinoma,basal_cell_carcinoma,0.9799486994743347,True,70.0,upper extremity
+940,melanocytic_Nevi,melanocytic_Nevi,0.9990891218185425,True,50.0,back
+941,melanocytic_Nevi,melanocytic_Nevi,0.9969672560691833,True,80.0,upper extremity
+942,vascular_lesions,vascular_lesions,0.9829092025756836,True,0.0,abdomen
+943,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.8193809390068054,True,70.0,chest
+944,melanocytic_Nevi,melanocytic_Nevi,0.9958634376525879,True,45.0,unknown
+945,melanocytic_Nevi,melanocytic_Nevi,0.9945387244224548,True,35.0,back
+946,dermatofibroma,dermatofibroma,0.9219122529029846,True,75.0,back
+947,melanoma,melanoma,0.5830864906311035,True,75.0,face
+948,vascular_lesions,vascular_lesions,0.9850548505783081,True,70.0,back
+949,melanocytic_Nevi,melanocytic_Nevi,0.9905077219009399,True,45.0,back
+950,melanocytic_Nevi,melanocytic_Nevi,0.9983336329460144,True,65.0,abdomen
+951,melanocytic_Nevi,melanocytic_Nevi,0.9943912625312805,True,20.0,back
+952,melanocytic_Nevi,melanocytic_Nevi,0.9960622191429138,True,30.0,lower extremity
+953,melanocytic_Nevi,melanocytic_Nevi,0.9990779161453247,True,55.0,trunk
+954,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9863421320915222,True,70.0,face
+955,melanocytic_Nevi,melanocytic_Nevi,0.9990085959434509,True,50.0,abdomen
+956,melanoma,melanoma,0.9717224836349487,True,75.0,face
+957,melanocytic_Nevi,melanocytic_Nevi,0.9986030459403992,True,25.0,abdomen
+958,basal_cell_carcinoma,basal_cell_carcinoma,0.9550508260726929,True,80.0,abdomen
+959,melanocytic_Nevi,melanocytic_Nevi,0.9966551065444946,True,40.0,neck
+960,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9858013987541199,True,70.0,scalp
+961,melanoma,melanocytic_Nevi,0.5450583100318909,False,45.0,face
+962,melanocytic_Nevi,melanocytic_Nevi,0.9847095608711243,True,70.0,chest
+963,basal_cell_carcinoma,basal_cell_carcinoma,0.9454366564750671,True,55.0,back
+964,melanoma,melanoma,0.9870889782905579,True,55.0,back
+965,melanocytic_Nevi,melanocytic_Nevi,0.9956439733505249,True,30.0,abdomen
+966,melanocytic_Nevi,melanocytic_Nevi,0.9930954575538635,True,40.0,abdomen
+967,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9896686673164368,True,70.0,back
+968,melanoma,melanoma,0.9866300821304321,True,55.0,back
+969,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9699463248252869,True,65.0,upper extremity
+970,melanocytic_Nevi,melanocytic_Nevi,0.9990754127502441,True,40.0,genital
+971,melanocytic_Nevi,melanocytic_Nevi,0.9991828799247742,True,40.0,abdomen
+972,melanocytic_Nevi,melanocytic_Nevi,0.983329176902771,True,50.0,lower extremity
+973,melanocytic_Nevi,melanocytic_Nevi,0.74397212266922,True,35.0,back
+974,melanocytic_Nevi,melanocytic_Nevi,0.9933898448944092,True,60.0,back
+975,melanocytic_Nevi,melanocytic_Nevi,0.9929350018501282,True,30.0,back
+976,melanocytic_Nevi,melanocytic_Nevi,0.9439278841018677,True,45.0,back
+977,melanocytic_Nevi,melanocytic_Nevi,0.999036431312561,True,60.0,lower extremity
+978,basal_cell_carcinoma,basal_cell_carcinoma,0.88956218957901,True,75.0,lower extremity
+979,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9828042984008789,True,45.0,lower extremity
+980,melanocytic_Nevi,melanocytic_Nevi,0.9987363219261169,True,30.0,back
+981,melanocytic_Nevi,melanocytic_Nevi,0.999087929725647,True,40.0,abdomen
+982,melanocytic_Nevi,melanocytic_Nevi,0.9989808201789856,True,60.0,abdomen
+983,melanocytic_Nevi,melanocytic_Nevi,0.9989846348762512,True,50.0,lower extremity
+984,melanocytic_Nevi,melanocytic_Nevi,0.9949278831481934,True,45.0,lower extremity
+985,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.8066200613975525,True,45.0,upper extremity
+986,actinic_keratoses,actinic_keratoses,0.7706092000007629,True,85.0,upper extremity
+987,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9757573008537292,True,80.0,unknown
+988,melanocytic_Nevi,melanocytic_Nevi,0.998921275138855,True,50.0,upper extremity
+989,dermatofibroma,dermatofibroma,0.9394214749336243,True,50.0,lower extremity
+990,melanoma,melanoma,0.9846382737159729,True,65.0,back
+991,melanocytic_Nevi,melanocytic_Nevi,0.9990257024765015,True,45.0,trunk
+992,melanoma,melanoma,0.8039756417274475,True,45.0,back
+993,melanocytic_Nevi,melanocytic_Nevi,0.9990689158439636,True,40.0,back
+994,melanocytic_Nevi,melanocytic_Nevi,0.9973590970039368,True,45.0,back
+995,dermatofibroma,melanocytic_Nevi,0.9379448294639587,False,40.0,lower extremity
+996,melanocytic_Nevi,melanocytic_Nevi,0.8118715882301331,True,80.0,back
+997,melanocytic_Nevi,melanocytic_Nevi,0.9928498268127441,True,15.0,back
+998,melanocytic_Nevi,melanocytic_Nevi,0.9990358352661133,True,50.0,upper extremity
+999,melanocytic_Nevi,melanocytic_Nevi,0.9670736789703369,True,40.0,chest
+1000,melanocytic_Nevi,melanocytic_Nevi,0.9963110089302063,True,45.0,foot
+1001,melanoma,melanocytic_Nevi,0.9712021350860596,False,65.0,back
+1002,melanocytic_Nevi,melanocytic_Nevi,0.9989579916000366,True,50.0,trunk
+1003,melanocytic_Nevi,melanocytic_Nevi,0.997340977191925,True,30.0,back
+1004,melanocytic_Nevi,melanocytic_Nevi,0.9974168539047241,True,55.0,genital
+1005,melanocytic_Nevi,melanocytic_Nevi,0.9948467016220093,True,50.0,abdomen
+1006,melanocytic_Nevi,melanocytic_Nevi,0.9984620809555054,True,45.0,abdomen
+1007,dermatofibroma,dermatofibroma,0.8590911030769348,True,55.0,upper extremity
+1008,melanocytic_Nevi,melanocytic_Nevi,0.9896246790885925,True,30.0,back
+1009,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9926707744598389,True,75.0,lower extremity
+1010,melanocytic_Nevi,melanocytic_Nevi,0.995305061340332,True,20.0,foot
+1011,melanocytic_Nevi,melanocytic_Nevi,0.9978837370872498,True,25.0,lower extremity
+1012,melanocytic_Nevi,melanocytic_Nevi,0.997199535369873,True,5.0,lower extremity
+1013,melanoma,melanoma,0.9822132587432861,True,60.0,back
+1014,melanocytic_Nevi,melanocytic_Nevi,0.9991121888160706,True,45.0,back
+1015,melanocytic_Nevi,melanocytic_Nevi,0.9986253976821899,True,55.0,lower extremity
+1016,melanocytic_Nevi,melanocytic_Nevi,0.9977672100067139,True,30.0,back
+1017,melanocytic_Nevi,melanocytic_Nevi,0.9991158843040466,True,35.0,upper extremity
+1018,melanocytic_Nevi,melanocytic_Nevi,0.9990537762641907,True,45.0,upper extremity
+1019,melanocytic_Nevi,melanocytic_Nevi,0.9916292428970337,True,50.0,back
+1020,actinic_keratoses,actinic_keratoses,0.9606177806854248,True,60.0,face
+1021,melanocytic_Nevi,melanocytic_Nevi,0.9947311878204346,True,45.0,back
+1022,melanocytic_Nevi,melanocytic_Nevi,0.9974395036697388,True,30.0,back
+1023,melanocytic_Nevi,melanocytic_Nevi,0.9988301396369934,True,55.0,lower extremity
+1024,basal_cell_carcinoma,basal_cell_carcinoma,0.9887616038322449,True,75.0,trunk
+1025,melanocytic_Nevi,melanocytic_Nevi,0.9955896139144897,True,50.0,lower extremity
+1026,melanoma,melanocytic_Nevi,0.9871152639389038,False,65.0,foot
+1027,melanocytic_Nevi,melanocytic_Nevi,0.9991322159767151,True,50.0,trunk
+1028,melanocytic_Nevi,melanocytic_Nevi,0.9990060925483704,True,50.0,trunk
+1029,melanoma,melanoma,0.8930056095123291,True,70.0,back
+1030,melanocytic_Nevi,melanocytic_Nevi,0.9985699653625488,True,45.0,lower extremity
+1031,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.7844873070716858,True,65.0,face
+1032,melanocytic_Nevi,melanocytic_Nevi,0.9988008737564087,True,55.0,lower extremity
+1033,melanocytic_Nevi,melanocytic_Nevi,0.9701446294784546,True,60.0,upper extremity
+1034,melanocytic_Nevi,melanocytic_Nevi,0.9989425539970398,True,30.0,back
+1035,melanocytic_Nevi,melanocytic_Nevi,0.9951347708702087,True,40.0,trunk
+1036,melanocytic_Nevi,melanocytic_Nevi,0.9990028738975525,True,45.0,lower extremity
+1037,melanocytic_Nevi,melanocytic_Nevi,0.9990618824958801,True,50.0,back
+1038,melanoma,melanoma,0.9667920470237732,True,55.0,face
+1039,melanocytic_Nevi,melanocytic_Nevi,0.9934176206588745,True,30.0,hand
+1040,melanocytic_Nevi,melanocytic_Nevi,0.9990805387496948,True,50.0,lower extremity
+1041,melanocytic_Nevi,melanocytic_Nevi,0.9985106587409973,True,35.0,abdomen
+1042,melanocytic_Nevi,melanocytic_Nevi,0.9990804195404053,True,55.0,upper extremity
+1043,melanocytic_Nevi,melanocytic_Nevi,0.9941441416740417,True,60.0,chest
+1044,actinic_keratoses,actinic_keratoses,0.9577722549438477,True,60.0,lower extremity
+1045,actinic_keratoses,actinic_keratoses,0.9623874425888062,True,50.0,face
+1046,melanocytic_Nevi,melanocytic_Nevi,0.9990605711936951,True,40.0,lower extremity
+1047,basal_cell_carcinoma,basal_cell_carcinoma,0.9860216975212097,True,65.0,chest
+1048,basal_cell_carcinoma,basal_cell_carcinoma,0.9880965948104858,True,40.0,chest
+1049,melanocytic_Nevi,basal_cell_carcinoma,0.9853643774986267,False,65.0,back
+1050,melanocytic_Nevi,melanocytic_Nevi,0.9981080293655396,True,35.0,trunk
+1051,melanocytic_Nevi,melanocytic_Nevi,0.9987906813621521,True,40.0,foot
+1052,melanocytic_Nevi,melanocytic_Nevi,0.997566819190979,True,85.0,back
+1053,melanocytic_Nevi,melanocytic_Nevi,0.9973834156990051,True,35.0,back
+1054,melanocytic_Nevi,melanocytic_Nevi,0.9991115927696228,True,50.0,back
+1055,melanocytic_Nevi,melanocytic_Nevi,0.99901282787323,True,80.0,upper extremity
+1056,melanocytic_Nevi,melanocytic_Nevi,0.9991303086280823,True,55.0,lower extremity
+1057,melanocytic_Nevi,melanocytic_Nevi,0.9847874045372009,True,55.0,back
+1058,melanocytic_Nevi,melanocytic_Nevi,0.9868817329406738,True,55.0,lower extremity
+1059,melanocytic_Nevi,melanocytic_Nevi,0.9836596250534058,True,65.0,abdomen
+1060,melanocytic_Nevi,melanocytic_Nevi,0.995633065700531,True,50.0,lower extremity
+1061,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9918302893638611,True,70.0,back
+1062,melanocytic_Nevi,melanocytic_Nevi,0.9989383816719055,True,50.0,back
+1063,melanocytic_Nevi,melanocytic_Nevi,0.9988484382629395,True,60.0,lower extremity
+1064,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9879377484321594,True,80.0,trunk
+1065,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.8152046203613281,True,40.0,chest
+1066,melanocytic_Nevi,melanocytic_Nevi,0.9951469302177429,True,25.0,chest
+1067,melanoma,melanoma,0.9891526699066162,True,70.0,face
+1068,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9792212843894958,True,65.0,upper extremity
+1069,melanocytic_Nevi,melanocytic_Nevi,0.9918962121009827,True,60.0,upper extremity
+1070,melanocytic_Nevi,melanocytic_Nevi,0.9971356391906738,True,40.0,back
+1071,melanocytic_Nevi,melanocytic_Nevi,0.9990712404251099,True,60.0,lower extremity
+1072,basal_cell_carcinoma,basal_cell_carcinoma,0.9808056354522705,True,45.0,upper extremity
+1073,melanocytic_Nevi,melanocytic_Nevi,0.9972932934761047,True,30.0,back
+1074,melanoma,melanoma,0.9668791890144348,True,55.0,back
+1075,melanocytic_Nevi,melanocytic_Nevi,0.9977102279663086,True,45.0,foot
+1076,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9257074594497681,True,60.0,back
+1077,melanocytic_Nevi,melanocytic_Nevi,0.998945415019989,True,50.0,lower extremity
+1078,melanocytic_Nevi,melanocytic_Nevi,0.9990215301513672,True,35.0,lower extremity
+1079,melanocytic_Nevi,melanocytic_Nevi,0.9824756383895874,True,75.0,back
+1080,melanocytic_Nevi,melanocytic_Nevi,0.9989256262779236,True,40.0,lower extremity
+1081,melanocytic_Nevi,melanocytic_Nevi,0.999017596244812,True,45.0,trunk
+1082,melanocytic_Nevi,melanocytic_Nevi,0.9932622313499451,True,60.0,back
+1083,melanocytic_Nevi,melanocytic_Nevi,0.999026894569397,True,40.0,abdomen
+1084,melanocytic_Nevi,melanocytic_Nevi,0.9989510774612427,True,35.0,lower extremity
+1085,melanocytic_Nevi,melanocytic_Nevi,0.9969494938850403,True,80.0,back
+1086,melanocytic_Nevi,melanocytic_Nevi,0.99828040599823,True,30.0,back
+1087,melanoma,melanoma,0.9798705577850342,True,45.0,lower extremity
+1088,melanocytic_Nevi,melanocytic_Nevi,0.9990149736404419,True,45.0,trunk
+1089,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9859483242034912,True,70.0,face
+1090,melanocytic_Nevi,melanocytic_Nevi,0.998923122882843,True,35.0,lower extremity
+1091,benign_keratosis-like_lesions,basal_cell_carcinoma,0.6471852660179138,False,50.0,upper extremity
+1092,melanocytic_Nevi,melanocytic_Nevi,0.9986912608146667,True,50.0,lower extremity
+1093,melanocytic_Nevi,melanocytic_Nevi,0.9868246912956238,True,50.0,chest
+1094,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9816725850105286,True,50.0,face
+1095,melanocytic_Nevi,melanocytic_Nevi,0.9984466433525085,True,15.0,back
+1096,melanocytic_Nevi,melanocytic_Nevi,0.9991894364356995,True,30.0,abdomen
+1097,melanocytic_Nevi,melanocytic_Nevi,0.9990228414535522,True,50.0,lower extremity
+1098,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.793498694896698,True,40.0,face
+1099,melanocytic_Nevi,melanocytic_Nevi,0.9990590214729309,True,45.0,back
+1100,melanoma,melanoma,0.9868800640106201,True,70.0,upper extremity
+1101,melanocytic_Nevi,melanocytic_Nevi,0.9983682036399841,True,65.0,trunk
+1102,actinic_keratoses,actinic_keratoses,0.965755820274353,True,75.0,lower extremity
+1103,melanocytic_Nevi,melanocytic_Nevi,0.9961469173431396,True,55.0,upper extremity
+1104,melanocytic_Nevi,melanocytic_Nevi,0.9972008466720581,True,40.0,back
+1105,melanocytic_Nevi,melanocytic_Nevi,0.9989606142044067,True,50.0,foot
+1106,melanocytic_Nevi,melanocytic_Nevi,0.9985635876655579,True,45.0,abdomen
+1107,melanocytic_Nevi,melanocytic_Nevi,0.9672440886497498,True,35.0,upper extremity
+1108,actinic_keratoses,actinic_keratoses,0.9385157823562622,True,85.0,lower extremity
+1109,melanocytic_Nevi,melanocytic_Nevi,0.9987265467643738,True,75.0,lower extremity
+1110,melanocytic_Nevi,melanocytic_Nevi,0.9991204142570496,True,45.0,trunk
+1111,basal_cell_carcinoma,basal_cell_carcinoma,0.9716479778289795,True,45.0,chest
+1112,melanocytic_Nevi,melanocytic_Nevi,0.9989312291145325,True,30.0,trunk
+1113,melanocytic_Nevi,melanocytic_Nevi,0.9971953630447388,True,50.0,back
+1114,melanocytic_Nevi,melanocytic_Nevi,0.9981443881988525,True,50.0,upper extremity
+1115,melanocytic_Nevi,melanocytic_Nevi,0.9987969398498535,True,45.0,lower extremity
+1116,melanocytic_Nevi,melanocytic_Nevi,0.9907693266868591,True,40.0,back
+1117,melanocytic_Nevi,melanocytic_Nevi,0.9859490394592285,True,25.0,chest
+1118,melanocytic_Nevi,melanocytic_Nevi,0.9980016350746155,True,,unknown
+1119,melanocytic_Nevi,melanocytic_Nevi,0.998809814453125,True,40.0,lower extremity
+1120,dermatofibroma,dermatofibroma,0.9466203451156616,True,65.0,lower extremity
+1121,melanocytic_Nevi,melanocytic_Nevi,0.9966013431549072,True,25.0,unknown
+1122,melanoma,melanoma,0.9755792617797852,True,55.0,back
+1123,melanocytic_Nevi,melanocytic_Nevi,0.9901953339576721,True,25.0,face
+1124,melanocytic_Nevi,melanocytic_Nevi,0.9991263747215271,True,45.0,upper extremity
+1125,melanocytic_Nevi,melanocytic_Nevi,0.9879085421562195,True,55.0,upper extremity
+1126,melanocytic_Nevi,melanocytic_Nevi,0.999092698097229,True,40.0,trunk
+1127,melanocytic_Nevi,melanocytic_Nevi,0.9923868179321289,True,55.0,back
+1128,melanocytic_Nevi,melanocytic_Nevi,0.9990742206573486,True,40.0,back
+1129,melanocytic_Nevi,melanocytic_Nevi,0.9969101548194885,True,75.0,upper extremity
+1130,melanocytic_Nevi,melanocytic_Nevi,0.9990870952606201,True,50.0,trunk
+1131,melanocytic_Nevi,melanocytic_Nevi,0.9985982775688171,True,50.0,foot
+1132,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9839388728141785,True,80.0,abdomen
+1133,melanocytic_Nevi,melanocytic_Nevi,0.9979261159896851,True,65.0,back
+1134,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9901089668273926,True,75.0,upper extremity
+1135,melanocytic_Nevi,melanocytic_Nevi,0.9990522265434265,True,55.0,trunk
+1136,melanocytic_Nevi,melanocytic_Nevi,0.9695606827735901,True,15.0,back
+1137,melanocytic_Nevi,melanocytic_Nevi,0.9843686819076538,True,45.0,abdomen
+1138,melanocytic_Nevi,melanocytic_Nevi,0.9991222023963928,True,45.0,trunk
+1139,melanocytic_Nevi,melanocytic_Nevi,0.9279606342315674,True,60.0,chest
+1140,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9906078577041626,True,45.0,abdomen
+1141,melanocytic_Nevi,melanocytic_Nevi,0.9983172416687012,True,70.0,abdomen
+1142,melanocytic_Nevi,melanocytic_Nevi,0.9327601790428162,True,60.0,lower extremity
+1143,basal_cell_carcinoma,basal_cell_carcinoma,0.9793016910552979,True,40.0,lower extremity
+1144,melanocytic_Nevi,melanocytic_Nevi,0.9987562894821167,True,50.0,lower extremity
+1145,melanoma,melanoma,0.9795037508010864,True,45.0,chest
+1146,melanocytic_Nevi,melanocytic_Nevi,0.9966709017753601,True,50.0,back
+1147,melanoma,melanoma,0.982491672039032,True,55.0,chest
+1148,melanocytic_Nevi,melanocytic_Nevi,0.9899803996086121,True,40.0,foot
+1149,melanocytic_Nevi,melanocytic_Nevi,0.9970968961715698,True,50.0,abdomen
+1150,melanocytic_Nevi,melanocytic_Nevi,0.9987102746963501,True,,unknown
+1151,melanocytic_Nevi,melanocytic_Nevi,0.9983192086219788,True,45.0,lower extremity
+1152,melanocytic_Nevi,melanocytic_Nevi,0.9990886449813843,True,25.0,upper extremity
+1153,melanocytic_Nevi,melanocytic_Nevi,0.9989368319511414,True,80.0,lower extremity
+1154,basal_cell_carcinoma,basal_cell_carcinoma,0.9821641445159912,True,65.0,back
+1155,melanocytic_Nevi,melanocytic_Nevi,0.9991023540496826,True,45.0,back
+1156,melanocytic_Nevi,melanocytic_Nevi,0.9982832670211792,True,45.0,foot
+1157,melanocytic_Nevi,melanocytic_Nevi,0.8954203128814697,True,30.0,back
+1158,melanocytic_Nevi,melanocytic_Nevi,0.995705783367157,True,40.0,lower extremity
+1159,melanocytic_Nevi,melanocytic_Nevi,0.9987581968307495,True,50.0,abdomen
+1160,actinic_keratoses,actinic_keratoses,0.9675722122192383,True,55.0,neck
+1161,melanocytic_Nevi,melanocytic_Nevi,0.9990683197975159,True,50.0,trunk
+1162,melanocytic_Nevi,melanocytic_Nevi,0.9962090253829956,True,0.0,abdomen
+1163,melanocytic_Nevi,melanocytic_Nevi,0.9599871635437012,True,40.0,lower extremity
+1164,melanocytic_Nevi,melanocytic_Nevi,0.9968326687812805,True,30.0,abdomen
+1165,melanocytic_Nevi,melanocytic_Nevi,0.9712622165679932,True,30.0,neck
+1166,melanocytic_Nevi,melanocytic_Nevi,0.9912474751472473,True,30.0,abdomen
+1167,melanocytic_Nevi,melanocytic_Nevi,0.9983970522880554,True,20.0,back
+1168,basal_cell_carcinoma,basal_cell_carcinoma,0.9745122194290161,True,45.0,chest
+1169,melanoma,melanoma,0.8371925950050354,True,85.0,chest
+1170,melanocytic_Nevi,melanocytic_Nevi,0.9991397857666016,True,60.0,back
+1171,melanoma,melanoma,0.9762223958969116,True,65.0,back
+1172,melanocytic_Nevi,melanocytic_Nevi,0.9964381456375122,True,65.0,abdomen
+1173,melanocytic_Nevi,melanocytic_Nevi,0.9976442456245422,True,65.0,lower extremity
+1174,melanocytic_Nevi,melanocytic_Nevi,0.9991787075996399,True,45.0,abdomen
+1175,melanocytic_Nevi,melanocytic_Nevi,0.9979070425033569,True,35.0,back
+1176,melanocytic_Nevi,melanocytic_Nevi,0.9979287385940552,True,40.0,upper extremity
+1177,basal_cell_carcinoma,basal_cell_carcinoma,0.9874043464660645,True,25.0,back
+1178,melanoma,melanoma,0.9846739768981934,True,55.0,abdomen
+1179,melanocytic_Nevi,melanocytic_Nevi,0.9987252354621887,True,45.0,lower extremity
+1180,melanocytic_Nevi,melanocytic_Nevi,0.9989522695541382,True,55.0,trunk
+1181,melanocytic_Nevi,melanocytic_Nevi,0.9974562525749207,True,35.0,upper extremity
+1182,basal_cell_carcinoma,basal_cell_carcinoma,0.9808762669563293,True,70.0,chest
+1183,melanocytic_Nevi,melanocytic_Nevi,0.9872899651527405,True,10.0,foot
+1184,melanoma,melanoma,0.991600751876831,True,55.0,neck
+1185,melanocytic_Nevi,melanocytic_Nevi,0.9986878037452698,True,50.0,trunk
+1186,melanoma,melanoma,0.9325382709503174,True,40.0,lower extremity
+1187,actinic_keratoses,actinic_keratoses,0.7998046875,True,60.0,lower extremity
+1188,melanocytic_Nevi,melanocytic_Nevi,0.9990037083625793,True,50.0,lower extremity
+1189,melanocytic_Nevi,melanocytic_Nevi,0.9912291765213013,True,70.0,back
+1190,melanocytic_Nevi,melanocytic_Nevi,0.9890007972717285,True,,foot
+1191,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9933187961578369,True,55.0,ear
+1192,melanocytic_Nevi,melanocytic_Nevi,0.9976518750190735,True,25.0,unknown
+1193,melanocytic_Nevi,benign_keratosis-like_lesions,0.9618483185768127,False,50.0,trunk
+1194,actinic_keratoses,benign_keratosis-like_lesions,0.610890805721283,False,60.0,lower extremity
+1195,melanocytic_Nevi,melanocytic_Nevi,0.9990014433860779,True,60.0,unknown
+1196,melanocytic_Nevi,melanocytic_Nevi,0.9959666728973389,True,25.0,chest
+1197,melanocytic_Nevi,melanocytic_Nevi,0.9986028075218201,True,25.0,abdomen
+1198,melanoma,melanoma,0.9848087430000305,True,65.0,upper extremity
+1199,melanoma,melanoma,0.9730738401412964,True,65.0,upper extremity
+1200,melanocytic_Nevi,melanocytic_Nevi,0.9962521195411682,True,30.0,foot
+1201,melanoma,melanoma,0.9614583849906921,True,85.0,upper extremity
+1202,melanocytic_Nevi,melanocytic_Nevi,0.973812997341156,True,45.0,lower extremity
+1203,melanoma,melanoma,0.9418103694915771,True,75.0,back
+1204,melanocytic_Nevi,melanocytic_Nevi,0.9990954399108887,True,40.0,back
+1205,melanocytic_Nevi,melanocytic_Nevi,0.999170184135437,True,25.0,back
+1206,melanocytic_Nevi,melanocytic_Nevi,0.990390419960022,True,65.0,upper extremity
+1207,melanoma,melanoma,0.9905217885971069,True,85.0,upper extremity
+1208,melanocytic_Nevi,melanocytic_Nevi,0.99903404712677,True,50.0,abdomen
+1209,melanocytic_Nevi,melanocytic_Nevi,0.9988971948623657,True,35.0,trunk
+1210,melanocytic_Nevi,melanocytic_Nevi,0.9969580173492432,True,30.0,chest
+1211,melanocytic_Nevi,melanocytic_Nevi,0.9991118311882019,True,45.0,abdomen
+1212,melanocytic_Nevi,melanocytic_Nevi,0.9986721277236938,True,50.0,trunk
+1213,melanoma,melanoma,0.9894976615905762,True,70.0,chest
+1214,melanoma,melanoma,0.9590723514556885,True,65.0,lower extremity
+1215,basal_cell_carcinoma,basal_cell_carcinoma,0.9875192642211914,True,80.0,back
+1216,vascular_lesions,vascular_lesions,0.9851406812667847,True,80.0,abdomen
+1217,melanocytic_Nevi,melanocytic_Nevi,0.9979280233383179,True,35.0,back
+1218,melanocytic_Nevi,melanocytic_Nevi,0.9843542575836182,True,75.0,trunk
+1219,melanocytic_Nevi,melanocytic_Nevi,0.9940518736839294,True,45.0,lower extremity
+1220,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.7780753970146179,True,55.0,lower extremity
+1221,melanocytic_Nevi,melanocytic_Nevi,0.9988548755645752,True,35.0,trunk
+1222,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9903068542480469,True,75.0,face
+1223,melanocytic_Nevi,melanocytic_Nevi,0.9990379810333252,True,35.0,lower extremity
+1224,melanocytic_Nevi,melanocytic_Nevi,0.997247040271759,True,50.0,abdomen
+1225,melanocytic_Nevi,melanocytic_Nevi,0.998454213142395,True,20.0,back
+1226,melanocytic_Nevi,melanocytic_Nevi,0.9956003427505493,True,65.0,back
+1227,melanocytic_Nevi,melanocytic_Nevi,0.9989426732063293,True,75.0,abdomen
+1228,basal_cell_carcinoma,basal_cell_carcinoma,0.9826351404190063,True,55.0,back
+1229,melanocytic_Nevi,melanocytic_Nevi,0.9919546246528625,True,20.0,back
+1230,melanocytic_Nevi,melanocytic_Nevi,0.9975658655166626,True,55.0,foot
+1231,melanocytic_Nevi,melanocytic_Nevi,0.9691943526268005,True,65.0,back
+1232,basal_cell_carcinoma,basal_cell_carcinoma,0.9775913953781128,True,45.0,face
+1233,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.8915758728981018,True,30.0,face
+1234,melanocytic_Nevi,melanocytic_Nevi,0.9991557598114014,True,40.0,lower extremity
+1235,melanocytic_Nevi,melanocytic_Nevi,0.9955946803092957,True,35.0,back
+1236,melanocytic_Nevi,melanocytic_Nevi,0.9990695118904114,True,70.0,trunk
+1237,melanocytic_Nevi,melanocytic_Nevi,0.9988917708396912,True,75.0,trunk
+1238,melanocytic_Nevi,melanocytic_Nevi,0.9988492727279663,True,55.0,abdomen
+1239,melanocytic_Nevi,melanocytic_Nevi,0.9965924620628357,True,35.0,back
+1240,melanocytic_Nevi,melanocytic_Nevi,0.9937618374824524,True,5.0,lower extremity
+1241,melanocytic_Nevi,melanocytic_Nevi,0.9990135431289673,True,60.0,trunk
+1242,melanocytic_Nevi,melanocytic_Nevi,0.9985948204994202,True,45.0,trunk
+1243,melanocytic_Nevi,melanocytic_Nevi,0.9991281628608704,True,35.0,lower extremity
+1244,melanocytic_Nevi,melanocytic_Nevi,0.9980999827384949,True,50.0,abdomen
+1245,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.9917667508125305,True,65.0,face
+1246,melanocytic_Nevi,melanocytic_Nevi,0.9990161657333374,True,20.0,upper extremity
+1247,melanocytic_Nevi,melanocytic_Nevi,0.9983117580413818,True,45.0,back
+1248,melanocytic_Nevi,melanocytic_Nevi,0.9978450536727905,True,40.0,lower extremity
+1249,melanocytic_Nevi,melanocytic_Nevi,0.9990901947021484,True,45.0,abdomen
+1250,melanocytic_Nevi,melanocytic_Nevi,0.9987780451774597,True,45.0,back
+1251,melanocytic_Nevi,melanocytic_Nevi,0.9972733855247498,True,35.0,back
+1252,melanocytic_Nevi,melanocytic_Nevi,0.9984230995178223,True,40.0,foot
+1253,melanocytic_Nevi,melanocytic_Nevi,0.9898161888122559,True,30.0,neck
+1254,melanocytic_Nevi,melanocytic_Nevi,0.997672975063324,True,45.0,trunk
+1255,melanocytic_Nevi,melanocytic_Nevi,0.9985230565071106,True,35.0,lower extremity
+1256,melanocytic_Nevi,melanocytic_Nevi,0.9987785220146179,True,50.0,trunk
+1257,melanoma,melanoma,0.8439253568649292,True,40.0,lower extremity
+1258,melanocytic_Nevi,melanocytic_Nevi,0.9986540079116821,True,50.0,back
+1259,melanocytic_Nevi,melanocytic_Nevi,0.9972172975540161,True,5.0,lower extremity
+1260,melanocytic_Nevi,melanocytic_Nevi,0.9940432906150818,True,45.0,unknown
+1261,melanocytic_Nevi,melanocytic_Nevi,0.9990492463111877,True,60.0,back
+1262,melanocytic_Nevi,melanocytic_Nevi,0.9951070547103882,True,60.0,trunk
+1263,melanocytic_Nevi,melanocytic_Nevi,0.9985145926475525,True,50.0,abdomen
+1264,melanocytic_Nevi,melanocytic_Nevi,0.9990793466567993,True,50.0,abdomen
+1265,melanocytic_Nevi,melanocytic_Nevi,0.9934695959091187,True,75.0,back
+1266,melanoma,melanoma,0.964085042476654,True,70.0,lower extremity
+1267,actinic_keratoses,actinic_keratoses,0.9791408181190491,True,60.0,hand
+1268,melanocytic_Nevi,melanocytic_Nevi,0.9989520311355591,True,40.0,abdomen
+1269,melanocytic_Nevi,melanocytic_Nevi,0.997200608253479,True,15.0,back
+1270,melanocytic_Nevi,melanocytic_Nevi,0.999021053314209,True,40.0,upper extremity
+1271,benign_keratosis-like_lesions,benign_keratosis-like_lesions,0.992569625377655,True,55.0,face
+1272,basal_cell_carcinoma,basal_cell_carcinoma,0.9896103143692017,True,70.0,back
+1273,basal_cell_carcinoma,basal_cell_carcinoma,0.9872023463249207,True,70.0,back
+1274,melanocytic_Nevi,melanocytic_Nevi,0.9991807341575623,True,30.0,trunk
+1275,actinic_keratoses,actinic_keratoses,0.38006192445755005,True,65.0,face
+1276,melanocytic_Nevi,melanocytic_Nevi,0.9990000128746033,True,35.0,lower extremity
+1277,melanocytic_Nevi,melanocytic_Nevi,0.9972725510597229,True,35.0,face
+1278,melanoma,melanoma,0.9518610835075378,True,80.0,lower extremity
+1279,melanocytic_Nevi,melanocytic_Nevi,0.9991777539253235,True,55.0,upper extremity
+1280,melanocytic_Nevi,melanocytic_Nevi,0.9959690570831299,True,50.0,trunk
+1281,melanocytic_Nevi,melanocytic_Nevi,0.999099850654602,True,40.0,abdomen
+1282,melanocytic_Nevi,melanocytic_Nevi,0.9990887641906738,True,35.0,trunk
+1283,benign_keratosis-like_lesions,melanocytic_Nevi,0.9650442004203796,False,50.0,lower extremity
+1284,melanocytic_Nevi,melanocytic_Nevi,0.9095919132232666,True,45.0,back
+1285,melanocytic_Nevi,melanocytic_Nevi,0.9979871511459351,True,70.0,back

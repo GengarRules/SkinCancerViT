@@ -101,7 +101,7 @@ print(f"Correct Prediction: {predicted_dx_sample == sample_true_dx}")
 
 ## Key Achievements & Performance
 
-The SkinCancerViT model achieved **97.30% success rate** on 1000 test samples, demonstrating its exceptional capability in distinguishing between various skin cancer diagnoses.
+The SkinCancerViT model achieved **97.35% success rate** on 1285 test samples, demonstrating its exceptional capability in distinguishing between various skin cancer diagnoses.
 
 This high performance underscores the effectiveness of the multimodal approach in capturing complex patterns from both visual and clinical data.
 
