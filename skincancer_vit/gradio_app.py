@@ -7,7 +7,9 @@ import random
 from skincancer_vit.model import SkinCancerViTModel
 from skincancer_vit.xai_utils import get_attention_map_output_gradcam
 from skincancer_vit.utils import get_torch_device
-from pytorch_grad_cam import ScoreCAM
+from pytorch_grad_cam import EigenCAM
+
+CAM_METHOD = EigenCAM
 
 
 HF_MODEL_REPO = "ethicalabs/SkinCancerViT"
@@ -59,7 +61,7 @@ def predict_uploaded_image(
             image_input=image,
             target_class_idx=predicted_class_idx,
             img_size=IMG_SIZE,
-            cam_method=ScoreCAM,
+            cam_method=CAM_METHOD,
             patch_size=PATCH_SIZE,
             raw_age=age,
             raw_localization=localization,
@@ -117,7 +119,7 @@ def predict_random_sample() -> tuple[Image.Image, str, np.ndarray]:
             image_input=sample_image,
             target_class_idx=predicted_class_idx,
             img_size=IMG_SIZE,
-            cam_method=ScoreCAM,
+            cam_method=CAM_METHOD,
             patch_size=PATCH_SIZE,
             raw_age=sample_age,
             raw_localization=sample_localization,

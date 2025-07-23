@@ -224,7 +224,16 @@ def get_attention_map_output_gradcam(
     # or the MLP block in the encoder. 'layernorm_after' is a good choice as it's
     # the output of the entire encoder layer.
     target_layers = [
-        cam_wrapper_model.original_model.vision_model.encoder.layer[1].layernorm_after
+        cam_wrapper_model.original_model.vision_model.encoder.layer[
+            -1
+        ].attention.attention.value,
+        cam_wrapper_model.original_model.vision_model.encoder.layer[
+            -1
+        ].attention.output,
+        cam_wrapper_model.original_model.vision_model.encoder.layer[
+            -1
+        ].intermediate.dense,
+        cam_wrapper_model.original_model.vision_model.encoder.layer[-1].layernorm_after,
     ]
     print(f"Using target_layers for CAM: {target_layers}")
 
@@ -257,8 +266,8 @@ def get_attention_map_output_gradcam(
         grayscale_cam = cam(
             input_tensor=input_tensor,
             targets=targets,
-            aug_smooth=False,
-            eigen_smooth=False,
+            aug_smooth=True,
+            eigen_smooth=True,
         )
         grayscale_cam = grayscale_cam[
             0, :
