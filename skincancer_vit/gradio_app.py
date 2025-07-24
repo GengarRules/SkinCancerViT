@@ -5,7 +5,10 @@ from datasets import load_dataset
 import random
 
 from skincancer_vit.model import SkinCancerViTModel
-from skincancer_vit.xai_utils import get_attention_map_output_gradcam
+from skincancer_vit.xai_utils import (
+    get_attention_map_output_gradcam,
+    generate_cam_animation,
+)
 from skincancer_vit.utils import get_torch_device
 from pytorch_grad_cam import EigenCAM
 
@@ -212,6 +215,50 @@ with gr.Blocks(title="Skin Cancer ViT Predictor") as demo:
             fn=predict_uploaded_image,
             inputs=[image_input, age_input, localization_input],
             outputs=[output_upload, output_uploaded_attention_map],
+        )
+
+    with gr.Tab("Generate CAM Animation"):
+        gr.Markdown("## Generate an Animation of Saliency Maps Across Layers")
+        with gr.Row():
+            anim_image_input = gr.Image(
+                type="pil", label="Upload Skin Lesion Image for Animation"
+            )
+            with gr.Column():
+                anim_age_input = gr.Number(
+                    label="Patient Age", minimum=0, maximum=120, step=1
+                )
+                anim_localization_input = gr.Dropdown(
+                    list(model.config.localization_to_id.keys()),
+                    label="Lesion Localization",
+                    value="unknown",
+                )
+                generate_anim_button = gr.Button("Generate Animation")
+
+        anim_output_message = gr.Markdown("Animation status will appear here.")
+        anim_output_gif = gr.Image(
+            label="CAM Animation", type="filepath", format="gif", interactive=False
+        )
+
+        generate_anim_button.click(
+            fn=lambda img, age, loc, sub_mod: generate_cam_animation(
+                full_multimodal_model=model,
+                image_input=img,
+                age=age,
+                localization=loc,
+                img_size=IMG_SIZE,
+                cam_method=CAM_METHOD,
+                patch_size=PATCH_SIZE,
+                output_gif_path="cam_animation_layer.gif",  # TODO: Unique name
+            ),
+            inputs=[
+                anim_image_input,
+                anim_age_input,
+                anim_localization_input,
+            ],
+            outputs=[
+                anim_output_message,
+                anim_output_gif,
+            ],  # Output the message and the downloadable file
         )
 
 if __name__ == "__main__":

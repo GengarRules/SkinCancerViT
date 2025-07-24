@@ -1,7 +1,8 @@
 import torch
 import torch.nn as nn
 import numpy as np
-from PIL import Image
+import imageio.v2 as imageio
+from PIL import Image, ImageDraw, ImageFont
 import cv2
 import torchvision.transforms as transforms
 
@@ -150,6 +151,7 @@ def get_attention_map_output_gradcam(
     cam_method: type,
     patch_size: int,
     device: torch.device,
+    target_layer_index: int = 5,
 ) -> np.ndarray:
     """
     Generates an attention map using pytorch-grad-cam for a specific class prediction
@@ -225,15 +227,8 @@ def get_attention_map_output_gradcam(
     # the output of the entire encoder layer.
     target_layers = [
         cam_wrapper_model.original_model.vision_model.encoder.layer[
-            -1
-        ].attention.attention.value,
-        cam_wrapper_model.original_model.vision_model.encoder.layer[
-            -1
-        ].attention.output,
-        cam_wrapper_model.original_model.vision_model.encoder.layer[
-            -1
-        ].intermediate.dense,
-        cam_wrapper_model.original_model.vision_model.encoder.layer[-1].layernorm_after,
+            target_layer_index
+        ].layernorm_after,
     ]
     print(f"Using target_layers for CAM: {target_layers}")
 
@@ -281,3 +276,92 @@ def get_attention_map_output_gradcam(
         enriched_image = overlay_heatmap_on_image(original_image_np, grayscale_cam)
 
         return enriched_image
+
+
+def generate_cam_animation(
+    full_multimodal_model: torch.nn.Module,  # Full SkinCancerViTModel
+    image_input: Image.Image,
+    age: int,
+    localization: str,
+    img_size: tuple,
+    cam_method: type,
+    patch_size: int,
+    output_gif_path: str = "cam_animation.gif",
+    duration_per_frame: float = 0.5,  # seconds
+):
+    """
+    Generates an animation of Grad-CAM saliency maps across ViT encoder layers.
+
+    Args:
+        image_input (PIL.Image.Image): The input image.
+        age (int): Patient age.
+        localization (str): Lesion localization.
+        output_gif_path (str): Path to save the output GIF.
+        duration_per_frame (float): Duration for each frame in the GIF.
+        target_sub_module_name (str): The specific sub-module within each layer to target.
+    """
+    print(f"Generating CAM animation for {output_gif_path}...")
+
+    # Predict the target class once for consistency
+    predicted_dx, confidence = full_multimodal_model.full_predict(
+        raw_image=image_input,
+        raw_age=age,
+        raw_localization=localization,
+        device=get_torch_device(),
+    )
+    predicted_class_idx = full_multimodal_model.config.label2id[predicted_dx]
+    print(f"Predicted class for animation: {predicted_dx} (ID: {predicted_class_idx})")
+
+    frames = []
+    num_encoder_layers = len(full_multimodal_model.vision_model.encoder.layer)
+
+    # Load a font for text overlay (adjust path/font as needed)
+    try:
+        font = ImageFont.truetype("arial.ttf", 20)  # Common font on Windows/Linux
+    except IOError:
+        print("Could not load arial.ttf, using default font.")
+        font = ImageFont.load_default()
+
+    for i in range(int(num_encoder_layers)):
+        print(f"Processing layer {i + 1}/{num_encoder_layers}...")
+        cam_image_np = get_attention_map_output_gradcam(
+            full_multimodal_model=full_multimodal_model,
+            raw_age=age,
+            raw_localization=localization,
+            image_input=image_input,
+            target_class_idx=predicted_class_idx,
+            img_size=img_size,
+            cam_method=cam_method,
+            patch_size=patch_size,
+            device=get_torch_device(),
+            target_layer_index=i,  # Pass the current layer index
+        )
+
+        # Convert numpy array back to PIL Image to add text
+        cam_pil_image = Image.fromarray(cam_image_np)
+        draw = ImageDraw.Draw(cam_pil_image)
+
+        # Add text overlay: Layer number and predicted class
+        text = f"Layer {i + 1}/{int(num_encoder_layers)} - Pred: {predicted_dx}"
+        text_color = (255, 255, 255)  # White color
+        # Add a black outline for better readability
+        draw.text(
+            (10, 10),
+            text,
+            font=font,
+            fill=(0, 0, 0),
+            stroke_width=2,
+            stroke_fill=(0, 0, 0),
+        )
+        draw.text((10, 10), text, font=font, fill=text_color)
+
+        frames.append(cam_pil_image)
+
+    duration = int(1000 * duration_per_frame)
+    # Save the frames as a GIF
+    # https://github.com/imageio/imageio/issues/973
+    imageio.mimsave(
+        output_gif_path, frames, duration=duration, loop=0
+    )  # loop=0 means infinite loop
+    print(f"Animation saved to {output_gif_path}")
+    return "", output_gif_path
