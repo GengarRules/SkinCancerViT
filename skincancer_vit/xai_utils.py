@@ -364,4 +364,4 @@ def generate_cam_animation(
         output_gif_path, frames, duration=duration, loop=0
     )  # loop=0 means infinite loop
     print(f"Animation saved to {output_gif_path}")
-    return "", output_gif_path
+    return predicted_dx, confidence, output_gif_path

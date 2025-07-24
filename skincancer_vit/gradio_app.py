@@ -1,3 +1,4 @@
+import traceback
 import gradio as gr
 import numpy as np
 from PIL import Image
@@ -76,8 +77,6 @@ def predict_uploaded_image(
         )
         return result_text, attention_map_image
     except Exception as e:
-        import traceback
-
         traceback.print_exc()
         return f"Prediction Error: {e}", None
 
@@ -142,10 +141,33 @@ def predict_random_sample() -> tuple[Image.Image, str, np.ndarray]:
         )
         return sample_image, result_str, attention_map_image
     except Exception as e:
-        import traceback
-
         traceback.print_exc()  # Print full traceback for debugging
         return None, f"Prediction Error on Random Sample: {e}", None
+
+
+def predict_cam_animation(
+    image: Image.Image, age: int, localization: str
+) -> tuple[str, Image.Image]:
+    try:
+        predicted_dx, confidence, output_gif_path = generate_cam_animation(
+            full_multimodal_model=model,
+            image_input=image,
+            age=age,
+            localization=localization,
+            img_size=IMG_SIZE,
+            cam_method=CAM_METHOD,
+            patch_size=PATCH_SIZE,
+            output_gif_path="cam_animation_layer.gif",  # TODO: Unique name
+        )
+        result_str = (
+            f"**Model Prediction:**\n"
+            f"- Predicted Diagnosis: **{predicted_dx}**\n"
+            f"- Confidence: {confidence:.4f}\n"
+        )
+        return result_str, output_gif_path
+    except Exception as e:
+        traceback.print_exc()  # Print full traceback for debugging
+        return f"Prediction Error on Random Sample: {e}", None
 
 
 # --- Gradio Interface ---
@@ -234,21 +256,18 @@ with gr.Blocks(title="Skin Cancer ViT Predictor") as demo:
                 )
                 generate_anim_button = gr.Button("Generate Animation")
 
-        anim_output_message = gr.Markdown("Animation status will appear here.")
-        anim_output_gif = gr.Image(
-            label="CAM Animation", type="filepath", format="gif", interactive=False
-        )
+        with gr.Row():
+            anim_output_gif = gr.Image(
+                label="CAM Animation", type="filepath", format="gif", interactive=False
+            )
+            with gr.Column():
+                anim_output_message = gr.Markdown("Prediction will appear here.")
 
         generate_anim_button.click(
-            fn=lambda img, age, loc, sub_mod: generate_cam_animation(
-                full_multimodal_model=model,
-                image_input=img,
+            fn=lambda img, age, loc, sub_mod: predict_cam_animation(
+                image=img,
                 age=age,
                 localization=loc,
-                img_size=IMG_SIZE,
-                cam_method=CAM_METHOD,
-                patch_size=PATCH_SIZE,
-                output_gif_path="cam_animation_layer.gif",  # TODO: Unique name
             ),
             inputs=[
                 anim_image_input,
