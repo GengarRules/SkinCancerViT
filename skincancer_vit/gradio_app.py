@@ -211,7 +211,10 @@ with gr.Blocks(title="Skin Cancer ViT Predictor") as demo:
         gr.Markdown("## Upload Your Image and Provide Patient Data")
         with gr.Row():
             image_input = gr.Image(
-                type="pil", label="Upload Skin Lesion Image (224x224 preferred)"
+                type="pil",
+                label="Upload Skin Lesion Image (224x224 preferred)",
+                height=250,
+                width=250,
             )
             with gr.Column():
                 age_input = gr.Number(
@@ -228,10 +231,11 @@ with gr.Blocks(title="Skin Cancer ViT Predictor") as demo:
                 predict_button = gr.Button("Get Prediction")
 
         with gr.Row():
-            output_upload = gr.Markdown("Prediction will appear here.")
             output_uploaded_attention_map = gr.Image(
                 type="numpy", label="Grad-CAM Saliency", height=250, width=250
             )
+            with gr.Column():
+                output_upload = gr.Markdown("Prediction will appear here.")
 
         predict_button.click(
             fn=predict_uploaded_image,
@@ -243,7 +247,10 @@ with gr.Blocks(title="Skin Cancer ViT Predictor") as demo:
         gr.Markdown("## Generate an Animation of Saliency Maps Across Layers")
         with gr.Row():
             anim_image_input = gr.Image(
-                type="pil", label="Upload Skin Lesion Image for Animation"
+                type="pil",
+                label="Upload Skin Lesion Image for Animation",
+                height=250,
+                width=250,
             )
             with gr.Column():
                 anim_age_input = gr.Number(
