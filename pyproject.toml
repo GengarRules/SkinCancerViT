@@ -61,7 +61,7 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["skincancer_vit"]
-exclude = ["results*"]
+exclude = ["results*", "data*"]
 
 [tool.uv.sources]
 grad-cam = { git = "https://github.com/jacobgil/pytorch-grad-cam.git" }
