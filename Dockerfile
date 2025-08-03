@@ -20,5 +20,9 @@ ADD . /app
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --locked
 
+EXPOSE 7860
+
+ENV GRADIO_SERVER_NAME="0.0.0.0"
+
 ENTRYPOINT ["/app/docker_entrypoint.sh"]
 CMD ["app"]
