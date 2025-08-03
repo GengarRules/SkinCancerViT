@@ -2,7 +2,7 @@
 FROM python:3.10.17-slim
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
-RUN apt-get update && apt-get install build-essential -y
+RUN apt-get update && apt-get install git -y
 
 # Change the working directory to the `app` directory
 WORKDIR /app
