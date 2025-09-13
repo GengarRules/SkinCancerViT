@@ -25,7 +25,7 @@ RUN uv sync --locked --no-cache
 FROM python:3.10.17-slim
 
 # Install runtime-only system dependencies
-RUN apt-get update && apt-get install -y libgl1 libglib2.0-0 && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y libgl1 libglib2.0-0 git && rm -rf /var/lib/apt/lists/*
 
 # Copy the uv binary from the builder stage so it's available at runtime
 COPY --from=builder /usr/local/bin/uv /usr/local/bin/
